@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.673cd961.css",
+    "main.js": "/static/js/main.94996ef4.js",
+    "static/media/fabrication.jpeg": "/static/media/fabrication.4bf9cf341dc32eba7e82.jpeg",
+    "static/media/building6.jpg": "/static/media/building6.d3834fca08e7843c0ec7.jpg",
+    "static/media/building3.jpg": "/static/media/building3.1c96da7cad81e184c20a.jpg",
+    "static/media/building4.jpg": "/static/media/building4.de3f3af39a3aa76fab28.jpg",
+    "static/media/building7.jpg": "/static/media/building7.b33940a19267664d3340.jpg",
+    "static/media/construction.jpg": "/static/media/construction.73ca382f4bd65011ce42.jpg",
+    "static/media/woodwork2.jpg": "/static/media/woodwork2.693ccc3c961c4b20db28.jpg",
+    "static/media/electrical.jpg": "/static/media/electrical.872596174de393f2bae0.jpg",
+    "static/media/l6.png": "/static/media/l6.781e7c98f43494e65f64.png",
+    "static/media/l3.png": "/static/media/l3.71e4fd49900cc092b07d.png",
+    "static/media/l5.png": "/static/media/l5.558eb7b845b7ddf70cc8.png",
+    "static/media/l4.png": "/static/media/l4.8026f71ded0d63431f22.png",
+    "static/media/l2.png": "/static/media/l2.2e5d237076704b37cdf0.png",
+    "static/media/logo-en.jpg": "/static/media/logo-en.2618e7e0624b14279da8.jpg",
+    "static/media/l1.png": "/static/media/l1.6354b5b0be9beea952f5.png",
+    "index.html": "/index.html",
+    "main.673cd961.css.map": "/static/css/main.673cd961.css.map",
+    "main.94996ef4.js.map": "/static/js/main.94996ef4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.673cd961.css",
+    "static/js/main.94996ef4.js"
+  ]
+}
