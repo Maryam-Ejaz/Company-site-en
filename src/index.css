@@ -1,0 +1,137 @@
+/* @import url("https://fonts.googleapis.com/css?family=Lato:700"); */
+/* @font-face {
+  font-family: 'CustomFont';
+  src: local("jost-variable") url('../fonts/jost-variable.ttf') format('truetype'),
+      local("font2")url('../fonts/font2.ttf') format('truetype'),
+      local("font3")url('../fonts/font3.ttf') format('truetype');
+} */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+    padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Jost", "sans-serif";
+}
+
+.hero-slider-overlay {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.578);
+}
+
+:root{
+  --background: #eff7f9;
+  --black:#0a0b10;
+  --purple:#3b85ec;
+  --pink:#e5a1f8;
+  --white:#fff;
+  --nav:#35353f;
+  --nav2:#3f3d56;
+}
+
+/* ===== Scrollbar CSS ===== */
+body::-webkit-scrollbar {
+  width: 0.2rem;
+}
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+body::-webkit-scrollbar-thumb {
+  background: -webkit-radial-gradient(
+    circle,
+    #b9a8fd 0%,
+    #348bdd 50%,
+    #312fac 100%
+  );
+}
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 200vh;
+}
+
+.page-component  {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* background-color: #182a3d; Example background color */
+  background-color: #2949a9;
+}
+
+.div-in-component{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* background-color: #2949a9; */
+  background-color: #2949a9;
+  padding: 5rem; /* Padding around the content */
+  padding-top: 10rem; /* Example background color */
+  color: #ccd0d55c; /* Example text color */
+}
+
+.component-space {
+  margin-top: 40%;
+  display: flex;
+  padding: 20%;
+  width: auto;
+}
+
+
+.page-component-heading {
+  
+  font-size: 3rem;
+  /* //background-color: #2949a9; */
+  color: white;
+  opacity: 1; 
+}
+
+.page-component-text {
+  margin-top: 5%;
+  line-height: 3rem;
+  font-size: 2rem;
+  font-family: "Jost", "sans-serif";
+}
+
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  .page-component  {
+    height: 80vh;
+  }
+
+  .div-in-component {
+    padding: 2rem; /* Further adjust padding for smaller screens */
+    padding-top: 5rem; /* Further adjust top padding for smaller screens */
+    background-color: #2949a9;
+  }
+
+  .page-component-heading {
+    font-size: 1.5rem; /* Further adjust font size for smaller screens */
+  }
+
+  .page-component-text {
+    line-height: 2rem; /* Further adjust line height for smaller screens */
+    font-size: 1.2rem; /* Further adjust font size for smaller screens */
+  }
+
+  .component-space {
+    margin-top: 10%;
+    padding: 2%;
+  }
+}

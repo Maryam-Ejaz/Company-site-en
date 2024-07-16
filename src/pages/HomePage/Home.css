@@ -1,0 +1,32 @@
+.homeMainDiv {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sliderContainer {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.aboutContainer_ {
+  height: 1100px;
+  justify-content: center;
+  align-items: center;
+  background-color: #70a6df; /* Example background color */
+  margin-top: 1rem; /* Example margin */
+  z-index: -1;
+}
+
+.aboutContainer {
+    height: 1000px;
+    justify-content: center;
+    align-items: center;
+    background-color: #ededf1; /* Example background color */
+    margin-top: 1rem; /* Example margin */
+    z-index: 2;
+  }

@@ -1,0 +1,39 @@
+.mainSlider{
+    width: 100vw;
+    height: 100vh;
+}
+
+.homeComponent {
+    position: absolute; /* Ensure relative positioning for children */
+    width: 100%;
+    height: 100%;
+  }
+
+.hs-title {
+    font-size: 3rem; /* Adjust size as needed */
+    font-weight: 900;
+    color: white;
+  }
+  
+  /* Style for the subtitle */
+.hs-subtitle {
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: white;
+  }
+
+.hsMainDiv {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.hsDiv {
+    display: flex;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+  
