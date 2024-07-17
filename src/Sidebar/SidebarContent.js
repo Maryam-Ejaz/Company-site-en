@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import './Sidebar.scss';
 
 
+
 const SidebarContent = ({ isActive, pages }) => {
   return (
-    <PageTransitions pageName={location.pathname}>
     <div className={`nav__content ${isActive ? 'is-active' : ''}`}>
       <nav className="nav__list">
         <ul>
@@ -18,7 +18,7 @@ const SidebarContent = ({ isActive, pages }) => {
         </ul>
       </nav>
     </div>
-    </PageTransitions>
+
   );
 };
 
