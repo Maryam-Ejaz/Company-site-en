@@ -12,55 +12,54 @@ import electrical from "../../assets/electrical.jpg";
 
 const HomeServices = () => {
     useEffect(() => {
-        // Register ScrollTrigger plugin
-        gsap.registerPlugin(ScrollTrigger);
-    
-        // Setup ScrollTrigger with a custom scrollerProxy
-        ScrollTrigger.scrollerProxy("#main2", {
-          scrollTop(value) {
-            return arguments.length ? window.scrollTo(value, 0) : window.pageYOffset;
-          },
-          getBoundingClientRect() {
-            return {
-              top: 0,
-              left: 0,
-              width: window.innerWidth,
-              height: window.innerHeight
-            };
-          },
-        });
-
-            // Refresh ScrollTrigger to update the scrollerProxy
-    ScrollTrigger.refresh();
-    
-    
-        // Split text content into spans for each character
-        const h1Element = document.querySelector("#page3 p");
-        const textContent = h1Element.textContent;
-        const spans = textContent.split("").map(char => `<span>${char}</span>`);
-        h1Element.innerHTML = spans.join(""); // Update innerHTML with spans
-    
-        // Animation using GSAP and ScrollTrigger
-        gsap.to("#page3 span", {
-          scrollTrigger: {
-            trigger: "#page3", // Adjust trigger to the parent container if needed
-            start: "top bottom",
-            end: "top 11%",
-            scroller: "#main2",
-            scrub: 0.5,
-          },
-          stagger: 0.2,
-          color: "#fff",
-        });
 
     
-        // Clean up on unmount
-        return () => {
-          ScrollTrigger.removeEventListener("#main2");
-        };
+    //     // Setup ScrollTrigger with a custom scrollerProxy
+    //     ScrollTrigger.scrollerProxy("#main2", {
+    //       scrollTop(value) {
+    //         return arguments.length ? window.scrollTo(value, 0) : window.pageYOffset;
+    //       },
+    //       getBoundingClientRect() {
+    //         return {
+    //           top: 0,
+    //           left: 0,
+    //           width: window.innerWidth,
+    //           height: window.innerHeight
+    //         };
+    //       },
+    //     });
 
-        // Refresh ScrollTrigger to update the scrollerProxy
-    ScrollTrigger.refresh();
+    //         // Refresh ScrollTrigger to update the scrollerProxy
+    // ScrollTrigger.refresh();
+    
+    
+    //     // Split text content into spans for each character
+    //     const h1Element = document.querySelector("#page3 p");
+    //     const textContent = h1Element.textContent;
+    //     const spans = textContent.split("").map(char => `<span>${char}</span>`);
+    //     h1Element.innerHTML = spans.join(""); // Update innerHTML with spans
+    
+    //     // Animation using GSAP and ScrollTrigger
+    //     gsap.to("#page3 span", {
+    //       scrollTrigger: {
+    //         trigger: "#page3", // Adjust trigger to the parent container if needed
+    //         start: "top bottom",
+    //         end: "top 11%",
+    //         scroller: "#main2",
+    //         scrub: 0.5,
+    //       },
+    //       stagger: 0.2,
+    //       color: "#fff",
+    //     });
+
+    
+    //     // Clean up on unmount
+    //     return () => {
+    //       ScrollTrigger.removeEventListener("#main2");
+    //     };
+
+    //     // Refresh ScrollTrigger to update the scrollerProxy
+    // ScrollTrigger.refresh();
       }, []);
     return (
         <div id='main2' className="services-section">
@@ -101,7 +100,7 @@ const HomeServices = () => {
                         </div>
                     </div>
                 </div>
-                <span className="page-component-text">And many more....
+                <span className="page-component-text pc-text">And many more....
                 </span>
             </div>
         </div>

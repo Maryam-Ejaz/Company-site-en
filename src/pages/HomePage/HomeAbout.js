@@ -44,47 +44,47 @@ function AboutPage() {
     // // Register ScrollTrigger plugin
     // gsap.registerPlugin(ScrollTrigger);
 
-    // Setup ScrollTrigger with a custom scrollerProxy
-    ScrollTrigger.scrollerProxy("#main_", {
-      scrollTop(value) {
-        return arguments.length ? window.scrollTo(value, 0) : window.pageYOffset;
-      },
-      getBoundingClientRect() {
-        return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight
-        };
-      },
-    });
+    // // Setup ScrollTrigger with a custom scrollerProxy
+    // ScrollTrigger.scrollerProxy("#main_", {
+    //   scrollTop(value) {
+    //     return arguments.length ? window.scrollTo(value, 0) : window.pageYOffset;
+    //   },
+    //   getBoundingClientRect() {
+    //     return {
+    //       top: 0,
+    //       left: 0,
+    //       width: window.innerWidth,
+    //       height: window.innerHeight
+    //     };
+    //   },
+    // });
 
-    // Refresh ScrollTrigger to update the scrollerProxy
-    ScrollTrigger.refresh();
+    // // // Refresh ScrollTrigger to update the scrollerProxy
+    // // ScrollTrigger.refresh();
 
-    // Split text content into spans for each character
-    const h1Element = document.querySelector("#page2 p");
-    const textContent = h1Element.textContent;
-    const spans = textContent.split("").map(char => `<span>${char}</span>`);
-    h1Element.innerHTML = spans.join(""); // Update innerHTML with spans
+    // // Split text content into spans for each character
+    // const h1Element = document.querySelector("#page2 p");
+    // const textContent = h1Element.textContent;
+    // const spans = textContent.split("").map(char => `<span>${char}</span>`);
+    // h1Element.innerHTML = spans.join(""); // Update innerHTML with spans
 
-    // Animation using GSAP and ScrollTrigger
-    gsap.to("#page2 p span", {
-      scrollTrigger: {
-        trigger: "#page2", // Adjust trigger to the parent container if needed
-        start: "top bottom",
-        end: "bottom 70%",
-        scroller: "#main_",
-        scrub: 0.5,
-      },
-      stagger: 0.2,
-      color: "#fff",
-    });
+    // // Animation using GSAP and ScrollTrigger
+    // gsap.to("#page2 p span", {
+    //   scrollTrigger: {
+    //     trigger: "#page2", // Adjust trigger to the parent container if needed
+    //     start: "top bottom",
+    //     end: "bottom 70%",
+    //     scroller: "#main_",
+    //     scrub: 0.5,
+    //   },
+    //   stagger: 0.2,
+    //   color: "#fff",
+    // });
 
-    // Clean up on unmount
-    return () => {
-      ScrollTrigger.removeEventListener("#main_");
-    };
+    // // Clean up on unmount
+    // return () => {
+    //   ScrollTrigger.removeEventListener("#main_");
+    // };
   }, []);
 
   return (
@@ -92,7 +92,7 @@ function AboutPage() {
       <div id="page2" className='div-in-component'>
         <span className="page-component-heading">
         Pakistan's Premier Builders</span>
-        <p className="page-component-text">ENGINEERS NEST is a leading construction, fabrication, and woodworks company 
+        <p className="page-component-text pc-text">ENGINEERS NEST is a leading construction, fabrication, and woodworks company 
           based in Lahore, Pakistan. Since our inception, we have established a reputation for delivering exceptional quality 
           and innovation in every project we undertake. From custom designs to government contracts, ENGINEERS NEST is 
           committed to exceeding expectations and building a better tomorrow for our clients nationwide.

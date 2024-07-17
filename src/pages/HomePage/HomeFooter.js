@@ -18,7 +18,6 @@ const HomeFooter = () => {
                   <textarea name="message" id="message" cols="30" rows="10" placeholder="Say Hello"></textarea>
                   <div class="button-container">
                     <div class="send-button">Send</div>
-                    
                   </div>
                 </div>
             </div>

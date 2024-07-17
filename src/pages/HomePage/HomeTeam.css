@@ -73,6 +73,10 @@
     padding: 15px;
     
   }
+
+  pc-text{
+    color: #fff;
+  }
   
   .our-team {
     background-color: #fff;

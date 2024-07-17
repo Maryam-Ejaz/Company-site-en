@@ -112,6 +112,15 @@
   opacity: 0;
 }
 
+.pc-text{
+  margin-top: 5%;
+  line-height: 3rem;
+  font-size: 2rem;
+  font-family: "Jost", "sans-serif";
+  color: #fff;
+}
+
+
 .service-content h2 {
   position: relative;
   font-size: 1.3rem;
