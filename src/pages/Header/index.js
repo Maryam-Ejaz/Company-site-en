@@ -188,7 +188,7 @@ const Header = () => {
       else if (window.innerWidth <= 1700) {
         // Adjust trigger positions for smaller screens
         triggerPosition1 = 3250; // Change this value based on your layout for smaller screens
-        triggerPosition2 = 5850; // Change this value based on your layout for smaller screens
+        triggerPosition2 = 5400; // Change this value based on your layout for smaller screens
       }
 
       if (scrollPosition > triggerPosition1 && scrollPosition < triggerPosition2) {
