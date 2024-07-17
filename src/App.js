@@ -44,7 +44,7 @@ export default function App() {
   left: 1rem; /* Adjust left position as needed */
   display: flex;
   align-items: center;
-  z-index: 1; /* Ensure it's above other content */
+  z-index: 5; /* Ensure it's above other content */
   text-decoration: none; /* Ensure no default underline */
   cursor: pointer;
 
@@ -80,7 +80,7 @@ export default function App() {
     // Add event listener for window load
     window.addEventListener('load', () => {
       setIsLoaded(true);
-    });
+    }, 3000);
 
     // Clean up event listeners on component unmount
     return () => {

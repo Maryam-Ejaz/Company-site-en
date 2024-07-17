@@ -16,19 +16,18 @@ const Home = () => {
   return (
       <div className='homeMainDiv'>
         
-        <Parallax className="half-screen-parallax" speed={-10}>
+        {/* <Parallax className="half-screen-parallax" speed={-10}> */}
           <div className='sliderContainer'>
               <HomePageSlider />
           </div>
-          </Parallax>
+          {/* </Parallax> */}
 
-          <Parallax className="half-screen-parallax" speed={0} >
+
           <HomeAbout />
-          </Parallax>
 
-          <Parallax className="half-screen-parallax" speed={-6} >
+
           <HomeServices/>
-          </Parallax>
+
 
           {/* Parallax bg */}
           <ExampleOne /> 

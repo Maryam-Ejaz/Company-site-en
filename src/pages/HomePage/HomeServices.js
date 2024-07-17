@@ -29,6 +29,9 @@ const HomeServices = () => {
             };
           },
         });
+
+            // Refresh ScrollTrigger to update the scrollerProxy
+    ScrollTrigger.refresh();
     
     
         // Split text content into spans for each character
@@ -51,10 +54,13 @@ const HomeServices = () => {
         });
 
     
-        // // Clean up on unmount
-        // return () => {
-        //   ScrollTrigger.removeEventListener("#main2");
-        // };
+        // Clean up on unmount
+        return () => {
+          ScrollTrigger.removeEventListener("#main2");
+        };
+
+        // Refresh ScrollTrigger to update the scrollerProxy
+    ScrollTrigger.refresh();
       }, []);
     return (
         <div id='main2' className="services-section">

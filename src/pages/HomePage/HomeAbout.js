@@ -59,8 +59,8 @@ function AboutPage() {
       },
     });
 
-    // // Refresh ScrollTrigger to update the scrollerProxy
-    // ScrollTrigger.refresh();
+    // Refresh ScrollTrigger to update the scrollerProxy
+    ScrollTrigger.refresh();
 
     // Split text content into spans for each character
     const h1Element = document.querySelector("#page2 p");
@@ -73,7 +73,7 @@ function AboutPage() {
       scrollTrigger: {
         trigger: "#page2", // Adjust trigger to the parent container if needed
         start: "top bottom",
-        end: "bottom 60%",
+        end: "bottom 70%",
         scroller: "#main_",
         scrub: 0.5,
       },
@@ -81,10 +81,10 @@ function AboutPage() {
       color: "#fff",
     });
 
-    // // Clean up on unmount
-    // return () => {
-    //   ScrollTrigger.removeEventListener("#main_");
-    // };
+    // Clean up on unmount
+    return () => {
+      ScrollTrigger.removeEventListener("#main_");
+    };
   }, []);
 
   return (
