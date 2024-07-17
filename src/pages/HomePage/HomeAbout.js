@@ -41,8 +41,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 function AboutPage() {
   useEffect(() => {
-    // Register ScrollTrigger plugin
-    gsap.registerPlugin(ScrollTrigger);
+    // // Register ScrollTrigger plugin
+    // gsap.registerPlugin(ScrollTrigger);
 
     // Setup ScrollTrigger with a custom scrollerProxy
     ScrollTrigger.scrollerProxy("#main_", {
@@ -59,8 +59,8 @@ function AboutPage() {
       },
     });
 
-    // Refresh ScrollTrigger to update the scrollerProxy
-    ScrollTrigger.refresh();
+    // // Refresh ScrollTrigger to update the scrollerProxy
+    // ScrollTrigger.refresh();
 
     // Split text content into spans for each character
     const h1Element = document.querySelector("#page2 p");
@@ -81,17 +81,17 @@ function AboutPage() {
       color: "#fff",
     });
 
-    // Clean up on unmount
-    return () => {
-      ScrollTrigger.removeEventListener("#main_");
-    };
+    // // Clean up on unmount
+    // return () => {
+    //   ScrollTrigger.removeEventListener("#main_");
+    // };
   }, []);
 
   return (
     <div id="main_" className="page-component">
       <div id="page2" className='div-in-component'>
-        <h3 className="page-component-heading">
-        Pakistan's Premier Builders</h3>
+        <span className="page-component-heading">
+        Pakistan's Premier Builders</span>
         <p className="page-component-text">ENGINEERS NEST is a leading construction, fabrication, and woodworks company 
           based in Lahore, Pakistan. Since our inception, we have established a reputation for delivering exceptional quality 
           and innovation in every project we undertake. From custom designs to government contracts, ENGINEERS NEST is 

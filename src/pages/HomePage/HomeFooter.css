@@ -1,41 +1,13 @@
-#page13 {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-    position: relative;
-    height: 50vh;
-    width: 100vw;
-    background-color: #000;
-    color: #fff;
-    font-family: a;
-    @media (max-width: 800px) {
-      flex-direction: column;
-      padding: 2rem;
-      text-align: center;
-      height: auto;
-    }
-  }
-  
-  #page13 > h1 {
-    font-size: 5vw;
-    line-height: 1;
-    font-weight: 100;
-  }
-  
-  #page13 > button {
-    padding: 18px 30px;
-    border: none;
-    background-color: #1369ce;
-    color: #fff;
-    border-radius: 50px;
-    margin-top: 2vw;
-  }
+
   
   #page14 {
     position: relative;
     height: 60vh;
     width: 100vw;
     background-color: #000;
+    @media (max-width: 850px) {
+      height: 30vh;
+    }
   }
   
   .page14-inner {
@@ -50,6 +22,7 @@
     color: #fff;
     border-top: 0.5px solid #ffffff5c;
     border-bottom: 0.5px solid #ffffff48;
+
   }
   
   .page14-inner > i {
@@ -86,13 +59,36 @@
 :root {
   --main-color: #1c2629;
   --dark-color: #000;
-  --light-color: #87A4B6;
+  --light-color: #2582ec;
   --medium-light-color: #1c2629;
   --orange: #1369ce;
   --orange-light: #1369ce;
-  --white: #ffffff;
-  font-family: "a";
+  --white_: #000;
 }
+
+#page13 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+    position: relative;
+    height: 50vh;
+    width: 100vw;
+    background-color: #000;
+    color: #fff;
+    font-family: a;
+
+    @media (max-width: 1100px){
+      height: 80vh;
+    }
+    
+    @media (max-width: 850px) {
+      flex-direction: column;
+      padding: 2rem;
+      text-align: start;
+      height: auto;
+    }
+  }
+  
 
 
 .form-container-main {
@@ -100,17 +96,69 @@
   width: 100vw;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+  padding: 1rem 4rem;
+
+  @media (max-width: 850px) {
+    padding: .5rem 2rem;
+  }
 }
 
 .montserrat{
   font-family: "jost";
-  font-size: 3rem;
+  font-size: 4rem;
+  margin: 0;
+  @media (max-width: 850px) {
+    font-size: 3rem;
+    text-align: center;
+  }
+  @media (max-width: 400px) {
+    font-size: 3rem;
+    text-align: center;
+    font-size: 2rem;
+  }
+
 }
+
+
 
 .montserrat_{
   font-family: "jost";
-  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  padding-right: 13rem;
+
+  @media (max-width: 1800px) {
+    padding-left: -1rem;
+    padding-right: 40rem;
+    margin-bottom: 3rem;
+    text-align: left;
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 1501px) {
+    padding-right: 25rem;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 1101px) {
+    padding-right: 15rem;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 850px) {
+    padding-right: 0rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 400px) {
+    padding-right: 0rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+  }
 }
 
 
@@ -118,22 +166,23 @@
   width: 100vw;
   background-color: var(--dark-color);
   display: flex;
-  padding: 2rem;
   /* border-left: 5px solid var(--orange); */
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
 
-  @media (max-width: 1200px) {
-    width: 65%;
+  @media (max-width: 1800px){
+    margin-top: 2rem;
+
   }
 
   @media (max-width: 1100px) {
-    width: 80%;
+    width: 100%;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     display: block;
     padding: 30px;
     width: 90%;
+    margin-left: -.7rem;
 
     .form-image {
       height: 100%;
@@ -148,7 +197,7 @@
       color: white;
       font-weight: 800;
 
-      @media (max-width: 800px) {
+      @media (max-width: 850px) {
         margin-left: 0;
       }
     }
@@ -161,7 +210,7 @@
   }
 
   .form {
-    flex-basis: 90%;
+    flex-basis: 40%;
 
     input {
       color: var(--light-color);
@@ -170,6 +219,7 @@
       border: none;
       outline: none;
       padding: 10px;
+      font-family: "jost";
       margin-bottom: 20px;
       font-weight: bold;
       transition: all 0.2s ease-in-out;
@@ -202,6 +252,7 @@
     .button-container {
       display: flex;
       gap: 10px;
+      font-family: "jost";
 
       .send-button {
         flex-basis: 70%;
@@ -211,7 +262,7 @@
         text-align: center;
         font-weight: bold;
         border: 1px solid transparent;
-        border-radius: 10%;
+        border-radius: 20px;
         transition: all 0.2s ease-in-out;
 
         &:hover {
@@ -221,26 +272,6 @@
         }
       }
 
-      .reset-button-container {
-        filter: drop-shadow(1px 1px 0 var(--orange));
-        flex-basis: 30%;
-
-        .reset-button {
-          position: relative;
-          text-align: center;
-          padding: 10px;
-          color: var(--orange);
-          font-weight: bold;
-          background: var(--dark-color);
-          border-radius: 20%;
-          transition: all 0.2s ease-in-out;
-
-          &:hover {
-            background: var(--orange);
-            color: var(--dark-color);
-          }
-        }
-      }
     }
   }
 }

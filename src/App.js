@@ -14,6 +14,7 @@ import Header from './pages/Header';
 import logo from "./assets/logo-en.jpg";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import SplashScreen from './pages/SplashScreen';
 
 
 
@@ -33,6 +34,9 @@ const pages = [
 // Main App component
 export default function App() {
   const [isMobile, setIsMobile] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  
 
   const Logo = styled(Link)`
   position: absolute;
@@ -40,7 +44,7 @@ export default function App() {
   left: 1rem; /* Adjust left position as needed */
   display: flex;
   align-items: center;
-  z-index: 1000; /* Ensure it's above other content */
+  z-index: 1; /* Ensure it's above other content */
   text-decoration: none; /* Ensure no default underline */
   cursor: pointer;
 
@@ -58,6 +62,10 @@ export default function App() {
 `;
 
   useEffect(() => {
+    // Simulate loading process
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 3000); // Adjust the timeout duration as needed
     // Function to check screen size and update isMobile state
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 1024); // Adjust this breakpoint as needed
@@ -69,13 +77,26 @@ export default function App() {
     // Add event listener for window resize
     window.addEventListener('resize', handleResize);
 
-    // Clean up event listener on component unmount
+    // Add event listener for window load
+    window.addEventListener('load', () => {
+      setIsLoaded(true);
+    });
+
+    // Clean up event listeners on component unmount
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('load', () => {
+        setIsLoaded(true);
+      });
     };
   }, []);
 
+  if (!isLoaded) {
+    return <SplashScreen/>
+  }
+
   return (
+    
     <ParallaxProvider>
       {isMobile ? (
         <Router>

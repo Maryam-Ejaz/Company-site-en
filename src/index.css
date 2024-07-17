@@ -13,6 +13,7 @@ html {
   overflow-x: hidden;
   margin: 0;
     padding: 0;
+    scroll-behavior: inherit;
 }
 
 body {
@@ -21,6 +22,7 @@ body {
   height: 100%;
   width: 100%;
   font-family: "Jost", "sans-serif";
+  scroll-behavior: auto;
 }
 
 .hero-slider-overlay {
@@ -95,11 +97,23 @@ body::-webkit-scrollbar-thumb {
 
 .page-component-heading {
   
-  font-size: 3rem;
-  /* //background-color: #2949a9; */
+  font-family: "jost";
+  font-size: 4rem;
+  margin: 0;
   color: white;
   opacity: 1; 
+
+  @media (max-width: 850px) {
+    font-size: 3rem;
+  
 }
+@media (max-width: 400px) {
+  font-size: 2rem;
+
+}
+
+}
+
 
 .page-component-text {
   margin-top: 5%;
@@ -119,10 +133,12 @@ body::-webkit-scrollbar-thumb {
     padding: 2rem; /* Further adjust padding for smaller screens */
     padding-top: 5rem; /* Further adjust top padding for smaller screens */
     background-color: #2949a9;
+    
   }
 
   .page-component-heading {
     font-size: 1.5rem; /* Further adjust font size for smaller screens */
+    font-family: "jost";
   }
 
   .page-component-text {

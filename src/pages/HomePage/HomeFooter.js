@@ -9,7 +9,7 @@ const HomeFooter = () => {
           <div class="form-container">
             <div class="form-image">
               <p class="montserrat">Get in touch</p>
-              <p class="montserrat_">Contact ENGINEERS NEST to discover tailored <br/> solutions for your building, design, <br/> and renovation needs. </p>
+              <p class="montserrat_">Contact ENGINEERS NEST to discover tailored solutions for your building, design, and renovation needs. </p>
               <model-viewer class="model" alt="laptop" src="https://raw.githubusercontent.com/Smit-Prajapati/prajapatismit/b5f434ae4d45d10fe1664d5606ad28e4d9c739af/images/laptop.glb" shadow-intensity="1" camera-controls touch-action="pan-y" environment-image="https://raw.githubusercontent.com/Smit-Prajapati/prajapatismit/b5f434ae4d45d10fe1664d5606ad28e4d9c739af/images/dancing_hall_2k.hdr" exposure="1.5" disable-zoom disable-tap camera-orbit="-45deg 60deg 9m" autoplay></model-viewer>
             </div>
             <div class="form">
@@ -18,9 +18,7 @@ const HomeFooter = () => {
                   <textarea name="message" id="message" cols="30" rows="10" placeholder="Say Hello"></textarea>
                   <div class="button-container">
                     <div class="send-button">Send</div>
-                    <div class="reset-button-container">
-                      <div class="reset-button" id="reset-btn">Reset</div>
-                    </div>
+                    
                   </div>
                 </div>
             </div>

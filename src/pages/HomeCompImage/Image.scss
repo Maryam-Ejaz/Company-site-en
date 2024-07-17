@@ -27,6 +27,7 @@
 }
 
 .image-content {
+  height: 100%;
   @extend .fill-absolute;
   @extend .flex-center;
 }

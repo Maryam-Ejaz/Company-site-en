@@ -20,13 +20,17 @@
   font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
-@media (max-width: 768px) {
+
+
+@media (max-width: 800px) {
   .service-container {
     flex-direction: column; /* Switch to column layout on smaller screens */
     justify-content: space-evenly; /* Evenly space items */
     padding: 20px; /* Add padding for spacing */
   }
 }
+
+
 
 .service-component-text {
   padding-top: 3rem;

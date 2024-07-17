@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import $ from 'jquery';
 
 const Counter = ({ id, end, duration }) => {
+  const counterRef = useRef(null);
+
   useEffect(() => {
     $.fn.jQuerySimpleCounter = function (options) {
       const settings = $.extend(
@@ -31,10 +33,30 @@ const Counter = ({ id, end, duration }) => {
       );
     };
 
-    $(`#${id}`).jQuerySimpleCounter({ end, duration });
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          $(`#${id}`).jQuerySimpleCounter({ end, duration });
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.1, // Adjust this threshold as needed
+    });
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+
+    return () => {
+      if (counterRef.current) {
+        observer.unobserve(counterRef.current);
+      }
+    };
   }, [id, end, duration]);
 
-  return <p id={id} className="number">0</p>;
+  return <p ref={counterRef} id={id} className="number">0</p>;
 };
 
 export default Counter;

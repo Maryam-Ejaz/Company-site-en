@@ -30,8 +30,6 @@ const HomeServices = () => {
           },
         });
     
-        // Refresh ScrollTrigger to update the scrollerProxy
-        ScrollTrigger.refresh();
     
         // Split text content into spans for each character
         const h1Element = document.querySelector("#page3 p");
@@ -40,7 +38,7 @@ const HomeServices = () => {
         h1Element.innerHTML = spans.join(""); // Update innerHTML with spans
     
         // Animation using GSAP and ScrollTrigger
-        gsap.to("#page3 p span", {
+        gsap.to("#page3 span", {
           scrollTrigger: {
             trigger: "#page3", // Adjust trigger to the parent container if needed
             start: "top bottom",
@@ -53,16 +51,16 @@ const HomeServices = () => {
         });
 
     
-        // Clean up on unmount
-        return () => {
-          ScrollTrigger.removeEventListener("#main2");
-        };
+        // // Clean up on unmount
+        // return () => {
+        //   ScrollTrigger.removeEventListener("#main2");
+        // };
       }, []);
     return (
         <div id='main2' className="services-section">
             <div id='page3' className='div-in-component'>
-                <h3 className="page-component-heading service-heading">Unmatched Service Spectrum</h3>
-                <p className="page-component-text">We specialize in a diverse array of services designed to meet
+                <span className="page-component-heading service-heading">Unmatched Service Spectrum</span>
+                <p className="page-component-text pc-text">We specialize in a diverse array of services designed to meet
                     every construction, fabrication, and woodwork need. From conceptualization to completion, our
                     team excels in delivering high-quality solutions tailored to exceed expectations across projects
                     of all sizes and complexities.
@@ -97,7 +95,7 @@ const HomeServices = () => {
                         </div>
                     </div>
                 </div>
-                <span className="service-component-text">And much more....
+                <span className="page-component-text">And many more....
                 </span>
             </div>
         </div>

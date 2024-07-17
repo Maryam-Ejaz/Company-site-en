@@ -1,5 +1,4 @@
 import { Image } from './Image';
-import { FillerSection } from './FillerSection';
 import Counter from './Counter'; 
 import img from '../../assets/building4.jpg';
 import './Counter.css'

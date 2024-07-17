@@ -1,59 +1,125 @@
+.client-div {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  height: 60vh;
+
+  @media (max-width: 1100px){
+    height: 80vh;
+  }
+}
+
+.client-content {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem 4rem;
+
+  
+
+  @media (max-width: 850px) {
+
+      padding: 0.5rem 2rem;
+    
+  }
+
+  @media (max-width: 400px) {
+    padding: 1rem 2rem;
+  
+}
+}
+
+
+
+.client-heading {
+  font-family: "jost";
+  font-size: 4rem;
+  margin: 0;
+  
+  @media (max-width: 850px) {
+      font-size: 3rem;
+      padding: 1rem 0rem;
+    
+  }
+  @media (max-width: 400px) {
+    font-size: 2rem;
+
+  }
+}
+
+
+
+.client-text {
+  margin: 0;
+  margin-left: 6px;
+  padding-right: 47rem;
+
+
+  @media (max-width: 1801px) {
+    font-size: 1.5rem;
+    padding-right: 45em;
+  }
+
+  @media (max-width: 1501px) {
+    font-size: 1.5rem;
+    padding-right: 30em;
+  }
+  @media (max-width: 1101px) {
+    font-size: 1.5rem;
+    padding-right: 18em;
+  }
+  @media (max-width: 850px) {
+
+    padding-right: 4rem;
+
+  }
+  @media (max-width: 400px) {
+    padding-right: 3rem;
+    font-size: 1rem;
+  }
+}
+
+
+
 .slider {
-    background: white;
-    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-    height: 130px;
-    margin: auto;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100vw;
+  background: white;
+  height: fit-content;
+  margin: auto;
+  overflow: hidden;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  display: flex;
+}
+
+
+.slide-track {
+  width: 100%;
+  display: flex;
+  width: calc(250px * 12); 
+  animation: scroll 20s linear infinite;
+  overflow: hidden;
+}
+
+.slide {
+  height: 100%;
+  width: 250px;
+}
+
+.slide img {
+  margin-top: 1rem;
+  height: 100px;
+  width: auto;
+}
+
+@keyframes scroll {
+  0% {
+    animation-delay: 0;
+    transform: translateX(0);
   }
-  
-  .slider::before,
-  .slider::after {
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    content: "";
-    height: 100px;
-    position: absolute;
-    width: 200px;
-    z-index: 2;
+  100% {
+    animation-delay: 0;
+    transform: translateX(-1000px); 
   }
-  
-  .slider::after {
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
-  }
-  
-  .slider::before {
-    left: 0;
-    top: 0;
-  }
-  
-  .slide-track {
-    animation: scroll 40s linear infinite; /* Use the animation defined in @keyframes scroll */
-    display: flex;
-    width: calc(250px * 14); /* Adjust width based on number of images */
-  }
-  
-  .slide {
-    height: 100px;
-    width: 250px;
-  }
-  
-  .slide img {
-    margin-top: 1rem;
-    height: 100px;
-    width: auto;
-  }
-  
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-250px * 14)); /* Adjust based on number of images */
-    }
-  }
-  
+}

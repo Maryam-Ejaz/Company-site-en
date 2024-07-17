@@ -11,6 +11,11 @@ import image_6 from "../../assets/l6.png";
 
 const HomeClients = () => {
   return (
+    <div className="client-div">
+      <div className="client-content">
+        <p className="client-heading">Worked with</p>
+        <p className="client-text">Thrilled to have worked with several prominent companies and government institutions on some great projects.</p>
+      </div>
     <div className="slider">
       <div className="slide-track">
         <div className="slide">
@@ -31,7 +36,6 @@ const HomeClients = () => {
         <div className="slide">
           <img src={image_6} alt="Logo 6" />
         </div>
-        {/* Repeat the images as needed */}
         <div className="slide">
           <img src={image_1} alt="Logo 1" />
         </div>
@@ -50,7 +54,27 @@ const HomeClients = () => {
         <div className="slide">
           <img src={image_6} alt="Logo 6" />
         </div>
+        <div className="slide">
+          <img src={image_1} alt="Logo 1" />
+        </div>
+        <div className="slide">
+          <img src={image_2} alt="Logo 2" />
+        </div>
+        <div className="slide">
+          <img src={image_3} alt="Logo 3" />
+        </div>
+        <div className="slide">
+          <img src={image_4} alt="Logo 4" />
+        </div>
+        <div className="slide">
+          <img src={image_5} alt="Logo 5" />
+        </div>
+        <div className="slide">
+          <img src={image_6} alt="Logo 6" />
+        </div>
+        
       </div>
+    </div>
     </div>
   );
 };

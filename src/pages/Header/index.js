@@ -170,14 +170,33 @@ const Header = () => {
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const triggerPosition1 = 3000; // Change this value based on your white background position
-      const triggerPosition2 = 4900; // Change this value based on where you want to revert back to white
+      let triggerPosition1 = 2500; // Default for larger screens
+      let triggerPosition2 = 5250; // Default for larger screens
+
+      if (window.innerWidth <= 1100) {
+        // Adjust trigger positions for smaller screens
+        triggerPosition1 = 3300; // Change this value based on your layout for smaller screens
+        triggerPosition2 = 6620; // Change this value based on your layout for smaller screens
+      }
+
+      else if (window.innerWidth <= 1300) {
+        // Adjust trigger positions for smaller screens
+        triggerPosition1 = 3250; // Change this value based on your layout for smaller screens
+        triggerPosition2 = 6150; // Change this value based on your layout for smaller screens
+      }
+
+      else if (window.innerWidth <= 1700) {
+        // Adjust trigger positions for smaller screens
+        triggerPosition1 = 3250; // Change this value based on your layout for smaller screens
+        triggerPosition2 = 5850; // Change this value based on your layout for smaller screens
+      }
+
       if (scrollPosition > triggerPosition1 && scrollPosition < triggerPosition2) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
-    };
+    }
 
     window.addEventListener("scroll", handleScroll);
 
