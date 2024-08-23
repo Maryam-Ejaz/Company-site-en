@@ -1,17 +1,18 @@
 .div-in-component-about{
     background-color: #eff7f9;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     width: 100%;
     padding: 5rem; /* Padding around the content */
-    padding-top: 10rem; /* Example background color */
+    padding-top: 10rem;
     color: #81868d5c; /* Example text color */
 }
 
 .page-component-about  {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: fit-content;
     justify-content: space-between;
     align-items: flex-start;
     background-color: #eff7f9;

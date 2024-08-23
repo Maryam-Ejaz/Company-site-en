@@ -1,5 +1,5 @@
 // src/pages/Services.js
-import {React, useEffect} from 'react';
+import {React, useLayoutEffect} from 'react';
 import ServicesBentoGrid from './ServicesBentoGrid';
 import FinalHomeFooter from '../HomePage/FinalHomeFooter';
 import HomeFooter from '../HomePage/HomeFooter';
@@ -8,12 +8,14 @@ import ServiceCardScreen from './ServiceCardScreen';
 
 const Services = () => {
   const location = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  }, [location.pathname]); 
+
+  // scroll to top of page after a page transition.
+  useLayoutEffect(() => {
+      document.documentElement.scrollTo({ top:0, left:0, behavior: "instant" });
+  }, [location.pathname]);
   return (
     <div className='homeMainDiv'>
-      <ServicesBentoGrid/>
+      <ServicesBentoGrid id="section1"/>
       <ServiceCardScreen/>
       <HomeFooter/>
       <FinalHomeFooter/>

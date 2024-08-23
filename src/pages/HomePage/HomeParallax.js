@@ -27,7 +27,7 @@ const HomeParallax = () => {
               <FontAwesomeIcon icon={faCoffee} size='2x'/>
                 <Counter id="number3" end={359} duration={2000}/>
                 <span></span>
-                <p>Cups of coffee</p>
+                <p>Tea Cups</p>
               </div>
             </div>
           </div>

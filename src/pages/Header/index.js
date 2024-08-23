@@ -115,6 +115,13 @@ const Header = () => {
   useEffect(() => {
     const element = ref.current;
 
+
+
+
+
+
+
+
     ScrollTrigger.create({
       trigger: element,
       start: "top top+=1",
@@ -178,12 +185,28 @@ const Header = () => {
 
       switch (location.pathname) {
         case '/about':
-          triggerPosition1 = 3000;
-          triggerPosition2 = 5500;
+          if (window.innerWidth <= 1100) {
+            triggerPosition1 = 500;
+            triggerPosition2 = 4720;
+          } else if (window.innerWidth <= 1300) {
+            triggerPosition1 = 700;
+            triggerPosition2 = 4750;
+          } else if (window.innerWidth <= 1700) {
+            triggerPosition1 = 700;
+            triggerPosition2 = 5600;
+          }
           break;
         case '/services':
-          triggerPosition1 = 2800;
-          triggerPosition2 = 5200;
+          if (window.innerWidth <= 1100) {
+            triggerPosition1 = 3300;
+            triggerPosition2 = 6620;
+          } else if (window.innerWidth <= 1300) {
+            triggerPosition1 = 3250;
+            triggerPosition2 = 6150;
+          } else if (window.innerWidth <= 1700) {
+            triggerPosition1 = 700;
+            triggerPosition2 = 5600;
+          }
           break;
         case '/portfolio':
           if (window.innerWidth <= 1100) {
@@ -291,3 +314,6 @@ const Header = () => {
 };
 
 export default Header;
+
+
+

@@ -154,6 +154,13 @@
         max-width: fit-content;
         min-height: 20vh;
     }
+    .our-values-container.scrolled-into-view {
+        opacity: 1;
+        transform: translateY(0);
+        height: fit-content;
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 801px) {
@@ -186,7 +193,7 @@
         width: 100%;
         width: calc(100% - 100px);
         /* height: 400px; */
-        height: fit-content;
+        height: max-content;
         padding: 10px;
         margin-left: 20px;
     
@@ -207,6 +214,14 @@
         opacity: 0;
         transform: translateY(50px); /* Move up initially */
         height: 60px; /* Initial height */
+    }
+
+    .our-values-container.scrolled-into-view {
+        opacity: 1;
+        transform: translateY(0);
+        height: fit-content;
+        padding-top: 5px;
+        padding-bottom: 10px;
     }
     
     .our-values-option.active {

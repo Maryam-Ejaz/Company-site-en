@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect, useRef } from 'react';
 import './HomeTeam.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -6,7 +6,7 @@ import { faGoogle, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-
 const teamMembers = [
   {
     name: "S. Hassan Abdullah",
-    title: "Cheif Operations Officer",
+    title: "Chief Operations Officer",
     imageSrc: "https://picsum.photos/130/130?image=1027",
   },
   {
@@ -16,7 +16,7 @@ const teamMembers = [
   },
   {
     name: "Nisar Ahmad",
-    title: "Cheif Thechnical Officer",
+    title: "Chief Technical Officer",
     imageSrc: "https://picsum.photos/130/130?image=856",
   },
   {
@@ -27,8 +27,33 @@ const teamMembers = [
 ];
 
 const HomeTeam = () => {
-  // Memoize the team members array
   const memoizedTeamMembers = useMemo(() => teamMembers, []);
+  const teamRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1, // Trigger when 10% of the element is in view
+      }
+    );
+
+    teamRefs.current.forEach((el, index) => {
+      if (el) {
+        observer.observe(el);
+        el.style.transitionDelay = `${index * 0.3}s`; // Stagger the animation
+      }
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="team-section">
@@ -36,7 +61,11 @@ const HomeTeam = () => {
         <p className="team-heading">Our Dynamic Team</p>
         <div className="row">
           {memoizedTeamMembers.map((member, index) => (
-            <div className="col" key={index}>
+            <div
+              className="col team-member"
+              key={index}
+              ref={(el) => (teamRefs.current[index] = el)}
+            >
               <div className="our-team">
                 <div className="picture">
                   <img className="img-fluid" src={member.imageSrc} alt={member.name} />

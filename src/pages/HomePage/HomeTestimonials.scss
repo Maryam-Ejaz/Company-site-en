@@ -21,6 +21,24 @@ $medium-screen: 1300px;
 $lr-screen: 3000px;
 
 $quotation-img: url("data:image/svg+xml,%3Csvg width='104' height='102' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M104 102V59.727H84.114c0-5.871.689-11.182 2.068-15.933 1.379-4.75 3.42-9.287 6.125-13.61C95.01 25.86 98.909 22.257 104 19.375V0c-9.758 4.27-17.712 9.874-23.864 16.813-6.151 6.939-10.712 14.545-13.681 22.818C63.485 47.904 62 59.941 62 75.74V102h42zm-62 0V59.727H22.114c0-5.871.689-11.182 2.068-15.933 1.379-4.75 3.42-9.287 6.125-13.61C33.01 25.86 36.909 22.257 42 19.375V0c-9.652 4.27-17.58 9.874-23.784 16.813C12.01 23.752 7.424 31.358 4.455 39.631 1.485 47.904 0 59.941 0 75.74V102h42z' fill='%23A775F1' fill-rule='nonzero'/%3E%3C/svg%3E");
+.testimonial-container {
+  #testimonials {
+      display: grid;
+      gap: 2rem;
+      /* Your existing grid layout code */
+  }
+
+  .testimonial {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+
+      &.visible {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+}
 
 .testimonial-container {
   height: fit-content;
@@ -33,7 +51,39 @@ $quotation-img: url("data:image/svg+xml,%3Csvg width='104' height='102' xmlns='h
   font-family: "Barlow";
   padding: 2rem 4rem;
 
-  
+//   @keyframes slideInLeft {
+//   from {
+//     opacity: 0;
+//     transform: translateX(-100%);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: translateX(0);
+//   }
+// }
+
+// @keyframes slideInRight {
+//   from {
+//     opacity: 0;
+//     transform: translateX(100%);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: translateX(0);
+//   }
+// }
+
+// .testimonial {
+//   opacity: 0;
+//   &.slide-in-left {
+//     animation: slideInLeft 0.8s forwards;
+//   }
+
+//   &.slide-in-right {
+//     animation: slideInRight 0.8s forwards;
+//   }
+// }
+
 
   @media (max-width: $medium-screen) {
     // padding: 2rem 4rem;

@@ -32,7 +32,9 @@
     cursor: pointer;
     width: 300px;
     margin: 10px;
-
+    opacity: 0;
+    transform: translateY(50px); /* Initial position for fade-in */
+    transition: opacity .5s ease-out, transform 1s ease-out;
     
 }
 
@@ -130,6 +132,16 @@
     background: #333;
     color: #fff;
 }
+
+/* Add this CSS to ClientCard.css */
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+
 
 .page-component-heading-client {
     font-family: "Jost", sans-serif;

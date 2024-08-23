@@ -53,7 +53,7 @@
 
 
 
-import React, { useEffect } from 'react';
+import React, {useLayoutEffect } from 'react';
 import HomeAbout from './HomeAbout';
 import HomePageSlider from './HomePageSlider';
 //import { Parallax } from 'react-scroll-parallax';
@@ -82,14 +82,15 @@ const MemoizedHomeClients = React.memo(HomeClients);
 
 const Home = React.memo(() => {
   const location = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  }, [location.pathname]); 
- 
+
+  // scroll to top of page after a page transition.
+  useLayoutEffect(() => {
+      document.documentElement.scrollTo({ top:0, left:0, behavior: "instant" });
+  }, [location.pathname]);
   return (
     <div className='homeMainDiv'>
       <div className='sliderContainer'>
-        <MemoizedHomePageSlider />
+        <MemoizedHomePageSlider data-name="HomeSection" />
       </div>
       <MemoizedHomeSSlider/>
       <MemoizedHomeAbout />

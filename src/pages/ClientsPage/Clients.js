@@ -1,5 +1,5 @@
 // src/pages/Clients.js
-import {React, useEffect} from 'react';
+import {React, useLayoutEffect} from 'react';
 import { useLocation } from 'react-router-dom';
 import ClientsBentoGrid from './ClientsBentoGrid';
 import FinalHomeFooter from '../HomePage/FinalHomeFooter';
@@ -8,12 +8,14 @@ import ClientCard from './ClientCard';
 
 const Clients = () => {
   const location = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  }, [location.pathname]); 
+
+  // scroll to top of page after a page transition.
+  useLayoutEffect(() => {
+      document.documentElement.scrollTo({ top:0, left:0, behavior: "instant" });
+  }, [location.pathname]);
   return (
     <div className='homeMainDiv'>
-      <ClientsBentoGrid/>
+      <ClientsBentoGrid id="section1"/>
       <ClientCard/>
       <HomeFooter/>
       <FinalHomeFooter/>

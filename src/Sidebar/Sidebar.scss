@@ -96,7 +96,7 @@
     right: -100%; // Hide the nav initially
     bottom: 0;
     width: 100vw;
-    background-color: $primary-ultradark;
+    background-color: #01afee;
     transition: right 1s $ease-in-out-cubic; // Slide in from right
     will-change: right;
     z-index: 98;
@@ -124,7 +124,7 @@
       &:after {
         width: $bar-length;
         height: $bar-thickness;
-        background-color: $primary;
+        background-color: #2f3293;
         border-radius: $bar-thickness;
         transition: 0.2s ease-in-out;
       }
