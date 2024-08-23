@@ -1,0 +1,142 @@
+/* LicenseCard.css */
+.license-card-container-main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    padding-top: 10rem;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    @media (max-width: 1500px) {
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+}
+
+  
+  .license-card-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    @media (max-width: 1500px) {
+        flex-direction: column;
+        justify-content: center;
+      }
+    
+  }
+  
+  .license-card {
+    position: relative;
+    cursor: pointer;
+    width: 300px;
+    margin: 10px;
+  }
+  
+  .license-face {
+    width: 100%;
+    height: 200px;
+    transition: 0.5s;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+  }
+  
+  .license-face1 {
+    position: relative;
+    background: #f5f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+  }
+  
+  .license-card:hover .license-face1 {
+    background: #01afee;
+    transform: translateY(0);
+  }
+  
+  .license-face1 .license-content {
+    opacity: 0.8;
+    transition: 0.5s;
+  }
+  
+  .license-card:hover .license-face1 .license-content {
+    opacity: 1;
+  }
+  
+  .license-face1 .license-content img {
+    width: 110px;
+    height: 100px;
+  }
+  
+  .license-face1 .license-content h3 {
+    margin: 10px 0 0;
+    padding: 0;
+    color: #242424;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  
+  .license-face2 {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+  }
+  
+  .license-card:hover .license-face2 {
+    transform: translateY(0);
+  }
+  
+  .license-face2 .license-content p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .license-face2 .license-content a {
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+  }
+  
+  .license-face2 .license-content a:hover {
+    background: #333;
+    color: #fff;
+  }
+  
+  .page-component-heading-license {
+  
+    font-family: "jost";
+    font-size: 4rem;
+    margin: 0;
+    color: rgb(30, 29, 29);
+    opacity: 1; 
+  
+    @media (max-width: 850px) {
+      font-size: 3rem;
+    
+  }
+  @media (max-width: 400px) {
+    font-size: 2rem;
+  
+  }
+  
+  }

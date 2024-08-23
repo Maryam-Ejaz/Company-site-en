@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 import SidebarContent from './SidebarContent'; // Assuming SidebarContent component exists
 import './Sidebar.scss';
-import { useLocation } from 'react-router-dom';
 
 const Sidebar = ({ pages }) => {
-  const [isActive, setIsActive] = useState(false); // Initially set to false for inactive state
+  const [isActive, setIsActive] = useState(false);
   const location = useLocation();
 
-  const toggleSidebar = () => {
-    setIsActive(!isActive);
-  };
+  const toggleSidebar = useCallback(() => {
+    setIsActive((prevState) => !prevState);
+  }, []);
 
   // Close sidebar when route changes
   useEffect(() => {
@@ -24,6 +24,6 @@ const Sidebar = ({ pages }) => {
       <SidebarContent isActive={isActive} pages={pages} />
     </div>
   );
-}
+};
 
-export default Sidebar;
+export default React.memo(Sidebar);

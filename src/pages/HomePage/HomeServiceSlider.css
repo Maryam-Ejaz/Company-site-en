@@ -1,0 +1,57 @@
+.sslider {
+    background: #2f3293;
+    height: 10vh;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .sslide-track {
+    display: flex;
+    width: calc(600px * 12); /* Adjust based on the number of slides */
+    animation: scroll 30s linear infinite; /* Adjust duration for desired speed */
+  }
+  
+  .sslide {
+    height: 100%;
+    width: 600px; /* Adjust based on slide size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures equal spacing */
+    width: 100%;
+    padding: 0 10px; /* Adjust padding to control space around the container */
+  }
+  
+  .stext-slide {
+    font-size: 1.3rem;
+    color: #fff;
+    flex: 1; /* Ensures text takes available space */
+    text-align: center;
+  }
+  
+  .sicon-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    flex: 0 0 auto; /* Ensures icon does not stretch */
+    margin-left: 10px; /* Space between text and icon */
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); /* Move the track width for seamless loop */
+    }
+  }
+  

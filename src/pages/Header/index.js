@@ -2,7 +2,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo-en.jpg";
 
 const Headers = styled.header`
@@ -41,6 +41,7 @@ const Logo = styled(Link)`
   h3 {
     color: inherit; /* Make text color inherit */
     margin: 0;
+    font-family: jost;
   }
 `;
 
@@ -59,6 +60,7 @@ const Nav = styled.nav`
   a {
     font-weight: 600;
     line-height: 1.5;
+    font-family: jost;
     color: inherit; /* Make text color inherit */
     position: relative;
     &::after {
@@ -106,6 +108,7 @@ const Button = styled(Link)`
 const Header = () => {
   const ref = useRef(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation(); // to get the current route
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -170,46 +173,109 @@ const Header = () => {
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      let triggerPosition1 = 2500; // Default for larger screens
-      let triggerPosition2 = 5250; // Default for larger screens
+      let triggerPosition1 = 2500;
+      let triggerPosition2 = 5250;
 
-      if (window.innerWidth <= 1100) {
-        // Adjust trigger positions for smaller screens
-        triggerPosition1 = 3300; // Change this value based on your layout for smaller screens
-        triggerPosition2 = 6620; // Change this value based on your layout for smaller screens
+      switch (location.pathname) {
+        case '/about':
+          triggerPosition1 = 3000;
+          triggerPosition2 = 5500;
+          break;
+        case '/services':
+          triggerPosition1 = 2800;
+          triggerPosition2 = 5200;
+          break;
+        case '/portfolio':
+          if (window.innerWidth <= 1100) {
+            triggerPosition1 = 3300;
+            triggerPosition2 = 6620;
+          } else if (window.innerWidth <= 1300) {
+            triggerPosition1 = 3250;
+            triggerPosition2 = 6150;
+          } else if (window.innerWidth <= 1700) {
+            triggerPosition1 = 700;
+            triggerPosition2 = 9250;
+          }
+          break;
+        case '/clients':
+          if (window.innerWidth <= 1100) {
+            triggerPosition1 = 3300;
+            triggerPosition2 = 6620;
+          } else if (window.innerWidth <= 1300) {
+            triggerPosition1 = 3250;
+            triggerPosition2 = 6150;
+          } else if (window.innerWidth <= 1700) {
+            triggerPosition1 = 700;
+            triggerPosition2 = 3300;
+          }
+          break;
+        case '/license':
+          if (window.innerWidth <= 1100) {
+            triggerPosition1 = 3300;
+            triggerPosition2 = 6620;
+          } else if (window.innerWidth <= 1300) {
+            triggerPosition1 = 3250;
+            triggerPosition2 = 6150;
+          } else if (window.innerWidth <= 1700) {
+            triggerPosition1 = 700;
+            triggerPosition2 = 1500;
+          }
+          break;
+        case '/contact':
+          if (window.innerWidth <= 1100) {
+            triggerPosition1 = 3300;
+            triggerPosition2 = 6620;
+          } else if (window.innerWidth <= 1300) {
+            triggerPosition1 = 3250;
+            triggerPosition2 = 6150;
+          } else if (window.innerWidth <= 1700) {
+            triggerPosition1 = 700;
+            triggerPosition2 = 9250;
+          }
+          break;
+        default:
+          if (window.innerWidth <= 1100) {
+            triggerPosition1 = 3300;
+            triggerPosition2 = 6620;
+          } else if (window.innerWidth <= 1300) {
+            triggerPosition1 = 3250;
+            triggerPosition2 = 6150;
+          } else if (window.innerWidth <= 1700) {
+            triggerPosition1 = 700;
+            triggerPosition2 = 5600;
+          }
+          break;
       }
 
-      else if (window.innerWidth <= 1300) {
-        // Adjust trigger positions for smaller screens
-        triggerPosition1 = 3250; // Change this value based on your layout for smaller screens
-        triggerPosition2 = 6150; // Change this value based on your layout for smaller screens
-      }
-
-      else if (window.innerWidth <= 1700) {
-        // Adjust trigger positions for smaller screens
-        triggerPosition1 = 3250; // Change this value based on your layout for smaller screens
-        triggerPosition2 = 5400; // Change this value based on your layout for smaller screens
-      }
+      // if (window.innerWidth <= 1100) {
+      //   triggerPosition1 += 500;
+      //   triggerPosition2 += 700;
+      // } else if (window.innerWidth <= 1300) {
+      //   triggerPosition1 += 400;
+      //   triggerPosition2 += 600;
+      // } else if (window.innerWidth <= 1700) {
+      //   triggerPosition1 += 200;
+      //   triggerPosition2 += 400;
+      // }
 
       if (scrollPosition > triggerPosition1 && scrollPosition < triggerPosition2) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
-    }
+    };
 
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
-
+  }, [location]);
   return (
     <Headers ref={ref} style={{ color: isScrolled ? 'black' : 'var(--white)' }}>
       <Logo to="/" style={{ color: isScrolled ? 'black' : 'var(--white)' }}>
         <img src={logo} alt="Engineers Nest" />
-        <h3>Engineers Nest</h3>
+        <h3>Engineersnest</h3>
       </Logo>
       <Nav style={{ color: isScrolled ? 'black' : 'var(--white)' }}>
         <Link to="/" style={{ color: isScrolled ? 'black' : 'var(--white)' }}>Home</Link>

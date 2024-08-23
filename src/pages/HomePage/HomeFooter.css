@@ -71,15 +71,13 @@
   justify-content: flex-start;
   align-items: flex-start;
     position: relative;
-    height: 50vh;
+    height: fit-content;
     width: 100vw;
     background-color: #000;
     color: #fff;
     font-family: a;
 
-    @media (max-width: 1100px){
-      height: 80vh;
-    }
+
     
     @media (max-width: 850px) {
       flex-direction: column;
@@ -98,7 +96,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   padding: 1rem 4rem;
-
+  padding-bottom: 4rem;
   @media (max-width: 850px) {
     padding: .5rem 2rem;
   }
@@ -253,6 +251,7 @@
       display: flex;
       gap: 10px;
       font-family: "jost";
+      padding-bottom: 2rem;
 
       .send-button {
         flex-basis: 70%;

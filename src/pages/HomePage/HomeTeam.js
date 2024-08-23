@@ -1,88 +1,63 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import './HomeTeam.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
+const teamMembers = [
+  {
+    name: "S. Hassan Abdullah",
+    title: "Cheif Operations Officer",
+    imageSrc: "https://picsum.photos/130/130?image=1027",
+  },
+  {
+    name: "S. Hussain Hammad",
+    title: "Chief Marketing Officer",
+    imageSrc: "https://picsum.photos/130/130?image=839",
+  },
+  {
+    name: "Nisar Ahmad",
+    title: "Cheif Thechnical Officer",
+    imageSrc: "https://picsum.photos/130/130?image=856",
+  },
+  {
+    name: "Imarn Ahmed",
+    title: "Head Fabrication",
+    imageSrc: "https://picsum.photos/130/130?image=836",
+  },
+];
+
 const HomeTeam = () => {
+  // Memoize the team members array
+  const memoizedTeamMembers = useMemo(() => teamMembers, []);
+
   return (
     <section className="team-section">
       <div className="team-container">
-        <p className="team-heading">
-          Our Dynamic Team</p>
+        <p className="team-heading">Our Dynamic Team</p>
         <div className="row">
-
-          <div className="col">
-            <div className="our-team">
-              <div className="picture">
-                <img className="img-fluid" src="https://picsum.photos/130/130?image=1027" alt="Michele Miller" />
+          {memoizedTeamMembers.map((member, index) => (
+            <div className="col" key={index}>
+              <div className="our-team">
+                <div className="picture">
+                  <img className="img-fluid" src={member.imageSrc} alt={member.name} />
+                </div>
+                <div className="team-content">
+                  <h3 className="name">{member.name}</h3>
+                  <h4 className="title">{member.title}</h4>
+                </div>
+                <ul className="social">
+                  <li><a href="https://www.linkedin.com/feed/"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+                  <li><a href="https://www.linkedin.com/feed/"><FontAwesomeIcon icon={faGoogle} /></a></li>
+                  <li><a href="https://www.linkedin.com/feed/"><FontAwesomeIcon icon={faInstagram} /></a></li>
+                  <li><a href="https://www.linkedin.com/feed/"><FontAwesomeIcon icon={faTwitter} /></a></li>
+                </ul>
               </div>
-              <div className="team-content">
-                <h3 className="name">Michele Miller</h3>
-                <h4 className="title">CEO</h4>
-              </div>
-              <ul className="social">
-                <li><a href="https://www.linkedin.com/feed/" className="fa fa-facebook" aria-hidden="true"><FontAwesomeIcon icon={faLinkedin}/></a></li>
-                <li><a href="https://www.linkedin.com/feed/" className="fa fa-twitter" aria-hidden="true"><FontAwesomeIcon icon={faGoogle}/></a></li>
-                <li><a href="https://www.linkedin.com/feed/" className="fa fa-google-plus" aria-hidden="true"><FontAwesomeIcon icon={faInstagram}/></a></li>
-                <li><a href="https://www.linkedin.com/feed/" className="fa fa-linkedin" aria-hidden="true"><FontAwesomeIcon icon={faTwitter}/></a></li>
-              </ul>
             </div>
-          </div>
-          <div className="col">
-            <div className="our-team">
-              <div className="picture">
-                <img className="img-fluid" src="https://picsum.photos/130/130?image=839" alt="Patricia Knott" />
-              </div>
-              <div className="team-content">
-                <h3 className="name">Patricia Knott</h3>
-                <h4 className="title">CTO</h4>
-              </div>
-              <ul className="social">
-                <li><a href="https://www.linkedin.com/feed/" aria-hidden="true"><FontAwesomeIcon icon={faLinkedin}/></a></li>
-                <li><a href="https://www.linkedin.com/feed/" className="fa fa-twitter" aria-hidden="true"><FontAwesomeIcon icon={faGoogle}/></a></li>
-                <li><a href="https://www.linkedin.com/feed/" className="fa fa-google-plus" aria-hidden="true"><FontAwesomeIcon icon={faInstagram}/></a></li>
-                <li><a href="https://www.linkedin.com/feed/" className="fa fa-linkedin" aria-hidden="true"><FontAwesomeIcon icon={faTwitter}/></a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="col">
-            <div className="our-team">
-              <div className="picture">
-                <img className="img-fluid" src="https://picsum.photos/130/130?image=856" alt="Justin Ramos" />
-              </div>
-              <div className="team-content">
-                <h3 className="name">Justin Ramos</h3>
-                <h4 className="title">COO</h4>
-              </div>
-              <ul className="social">
-                <li><a href="https://www.linkedin.com/feed/" className="fa fa-facebook" aria-hidden="true"><FontAwesomeIcon icon={faLinkedin}/></a></li>
-                <li><a href="https://www.linkedin.com/feed/" className="fa fa-twitter" aria-hidden="true"><FontAwesomeIcon icon={faGoogle}/></a></li>
-                <li><a href="https://www.linkedin.com/feed/" className="fa fa-google-plus" aria-hidden="true"><FontAwesomeIcon icon={faInstagram}/></a></li>
-                <li><a href="https://www.linkedin.com/feed/" className="fa fa-linkedin" aria-hidden="true"><FontAwesomeIcon icon={faTwitter}/></a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="col">
-            <div className="our-team">
-              <div className="picture">
-                <img className="img-fluid" src="https://picsum.photos/130/130?image=836" alt="Mary Huntley" />
-              </div>
-              <div className="team-content">
-                <h3 className="name">Mary Huntley</h3>
-                <h4 className="title">CMO</h4>
-              </div>
-              <ul className="social">
-                <li><a href="https://www.linkedin.com/feed/" className="fa fa-facebook" aria-hidden="true"><FontAwesomeIcon icon={faLinkedin}/></a></li>
-                <li><a href="https://www.linkedin.com/feed/" className="fa fa-twitter" aria-hidden="true"><FontAwesomeIcon icon={faGoogle}/></a></li>
-                <li><a href="https://www.linkedin.com/feed/" className="fa fa-google-plus" aria-hidden="true"><FontAwesomeIcon icon={faInstagram}/></a></li>
-                <li><a href="https://www.linkedin.com/feed/" className="fa fa-linkedin" aria-hidden="true"><FontAwesomeIcon icon={faTwitter}/></a></li>
-              </ul>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-export default HomeTeam;
+export default React.memo(HomeTeam);

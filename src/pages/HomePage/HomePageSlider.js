@@ -52,7 +52,7 @@ function HomePageSlider() {
               <Title>Building Beyond Boundaries</Title>
               <div className='hsDiv'>
                 <Subtitle>
-                  Your trusted partner in construction, fabrication, and woodworks across Pakistan.
+                  Your trusted partner in construction, fabrication, and interior work across Pakistan.
                 </Subtitle>
               </div>
             </div>
@@ -91,7 +91,7 @@ function HomePageSlider() {
 
       <Slide
         shouldRenderMask
-        label="Wood Work"
+        label="Interior"
         background={{
           backgroundImageSrc: image_1,
           backgroundAnimation:"zoom",

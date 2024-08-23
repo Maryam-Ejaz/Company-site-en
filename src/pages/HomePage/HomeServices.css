@@ -12,17 +12,18 @@
 .service-container {
   min-height: 100%;
   margin-top: 2rem;
+  
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #2949a9;
+  background: #2f3293;
   font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
 
 
-@media (max-width: 800px) {
+@media (max-width: 1250px) {
   .service-container {
     flex-direction: column; /* Switch to column layout on smaller screens */
     justify-content: space-evenly; /* Evenly space items */
@@ -41,13 +42,14 @@
 
 
 .service-box {
+  will-change: transform;
   position: relative;
   width: 250px;
   height: 250px;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   overflow: hidden;
-  margin: 10px; /* Adjust margin for spacing between cards */
+  margin: 35px; /* Adjust margin for spacing between cards */
 }
 
 .service-box::before {
@@ -56,8 +58,8 @@
   /* inset: -5px 70px; */
   inset: -20px -200px;
   background: linear-gradient(315deg, transparent,  transparent);
-  transition: 0.5s;
-  animation: border-animation 8s linear infinite;
+  /* transition: 0.5s; */
+  /* animation: border-animation 8s linear infinite; */
 }
 
 .service-box:hover::before {
@@ -65,14 +67,14 @@
   background: linear-gradient(315deg, #00ccff, #00ccff);
 }
 
-@keyframes border-animation {
+/* @keyframes border-animation {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
   }
-}
+} */
 
 .service-box::after {
   content: "";
@@ -116,8 +118,9 @@
   margin-top: 5%;
   line-height: 3rem;
   font-size: 2rem;
-  font-family: "Jost", "sans-serif";
-  color: #fff;
+  font-family: "Jost";
+  color: #ede4e491;
+  padding-bottom: 2rem;
 }
 
 
@@ -154,4 +157,23 @@
 
 .service-content a:hover {
   letter-spacing: 0.2rem;
+}
+
+
+
+@media (max-width: 768px) {
+  .page-component  {
+    height: 80vh;
+  }
+
+
+  .page-component-text {
+    line-height: 2rem; /* Further adjust line height for smaller screens */
+    font-size: 1.2rem; /* Further adjust font size for smaller screens */
+  }
+
+  .component-space {
+    margin-top: 10%;
+    padding: 2%;
+  }
 }

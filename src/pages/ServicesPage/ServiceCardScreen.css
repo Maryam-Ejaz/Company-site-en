@@ -1,0 +1,112 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} */
+
+.service-card-container {
+  width: 100%;
+  min-height: fit-content;
+  padding: 8% 8%;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "jost";
+}
+
+.service-card-container .service-card-text {
+  padding-top: 5%;
+  margin-bottom: 60px;
+  position: relative;
+  font-family: "jost";
+  font-size: 4rem;
+
+
+  @media (max-width: 800px) {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.service-card-container h1 {
+  text-align: center;
+  padding-top: 5%;
+  margin-bottom: 60px;
+  font-weight: 600;
+  position: relative;
+  font-family: "jost";
+}
+
+.service-card-container h1::after {
+  content: '';
+  background: #303ef7;
+  width: 100px;
+  height: 5px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "jost";
+  
+}
+
+.service-card-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.service-card {
+  text-align: center;
+  padding: 25px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  background: transparent;
+  transition: transform 0.5s, background 0.5s;
+}
+
+.service-card h2 {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-family: "jost";
+}
+
+.service-icon {
+  color: #2f3293;
+  margin-bottom: 15px;
+}
+
+.service-card:hover {
+  background: #2f3293;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.service-card:hover .service-icon {
+  color: #fff;
+}
+
+.service-card:hover .learn-more-button {
+    color: #fff;
+  }
+
+.learn-more-button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  border: none;
+  background-color: transparent;
+  color: #2f3293;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.learn-more-button:hover {
+  background-color: transparent;
+}

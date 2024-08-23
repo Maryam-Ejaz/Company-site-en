@@ -1,5 +1,6 @@
 import React from 'react';
 import './FinalHomeFooter.css';
+import { Link } from 'react-router-dom';
 import logo from "../../assets/logo-en.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressBook, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -8,45 +9,50 @@ const FinalHomeFooter = () => {
   return (
     <>
       <footer className="main-footer">
-        <div className="container">
+        <div className="footer-container">
           <div className="footer-content">
             <div className="footer-row">
-              <div className="footer-column">
+              <div className="footer-column-o">
                 <div className="logo-widget footer-widget">
                   <figure className="logo-box">
                     <a href="#"><img src={logo} alt="Logo" /></a>
                   </figure>
                   <div className="text">
-                    <p>Lorem ipsum dolor amet consectetur adi pisicing elit sed eiusm tempor incididunt ut labore dolore magna aliqua enim ad minim veniam quis.nostrud exercita.laboris nisi ut aliquip ea commodo conse quatuis aute irure.</p>
+                    <p>ENGINEERSNEST is a leading construction, fabrication, and interior work company 
+          based in Lahore, Pakistan. Since our inception, we have established a reputation for delivering exceptional quality 
+          and innovation in every project we undertake.</p>
                     <span className="headerLine"></span>
                   </div>
                   <div className="service-widget footer-widget">
-                    <ul className="list">
-                      <li><a href="#">About</a></li>
-                      <li><a href="#">Services</a></li>
-                      <li><a href="#">Portfolio</a></li>
-                      <li><a href="#">Clients</a></li>
-                    </ul>
+                  <nav className='nav-footer'>
+      <ul className="list">
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/services">Services</Link></li>
+        <li><Link to="/portfolio">Portfolio</Link></li>
+        <li><Link to="/contact">Contact us</Link></li>
+      </ul>
+    </nav>
                   </div>
                 </div>
               </div>
-              <div className="footer-column">
+              <div className="footer-column-o">
                 <div className="contact-widget footer-widget">
                   <div className="text">
                     <div className="hf-contact">
-                      <p>Lorem Ipsum, simply dummy text, printing, Lahore</p>
+                      <p>942-G LDA AVENUE-I, Lahore</p>
                       <div className="footer-icon-div">
                         <FontAwesomeIcon className='footer-icon' icon={faAddressBook}/>
                       </div>
                     </div>
                     <div className="hf-contact">
-                      <p>+92 (784) 1223323</p>
+                      <p>+923004499989</p>
                       <div className="footer-icon-div">
                         <FontAwesomeIcon className='footer-icon' icon={faPhone}/>
                       </div>
                     </div>
                     <div className="hf-contact">
-                      <p>info@example.com</p>
+                      <p>engineernest.pak@gmail.com</p>
                       <div className="footer-icon-div">
                         <FontAwesomeIcon className='footer-icon' icon={faEnvelope}/>
                       </div>

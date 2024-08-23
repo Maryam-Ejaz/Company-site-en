@@ -1,22 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import About from './pages/About';
-import Home from './pages/HomePage/Home';
-import Services from './pages/Services';
-import Portfolio from './pages/Portfolio';
-import License from './pages/License';
-import Certification from './pages/Certification';
-import Clients from './pages/Clients';
-import Contact from './pages/Contact';
-import Sidebar from './Sidebar/Sidebar';
 import { ParallaxProvider } from 'react-scroll-parallax';
-import Header from './pages/Header';
-import logo from "./assets/logo-en.jpg";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import SplashScreen from './pages/SplashScreen';
-
-
+import About from './pages/AboutPage/About';
+import Home from './pages/HomePage/Home';
+import Services from './pages/ServicesPage/Services';
+import Portfolio from './pages/PortfolioPage/Portfolio';
+import License from './pages/LicensePage/License';
+import Clients from './pages/ClientsPage/Clients';
+import Contact from './pages/ContactPage/Contact';
+import Sidebar from './Sidebar/Sidebar';
+import Header from './pages/Header';
+import logo from './assets/logo-en.jpg';
+import SliderDetail from './pages/ServiceSliderDetail/SliderDetail';
+import { SlideProvider } from './pages/ServiceSliderDetail/SlideContent';
 
 // Define pages for the sidebar
 const pages = [
@@ -25,27 +24,18 @@ const pages = [
   { name: 'Services', route: '/services' },
   { name: 'Portfolio', route: '/portfolio' },
   { name: 'License', route: '/license' },
-  { name: 'Certification', route: '/certification' },
   { name: 'Clients', route: '/clients' },
   { name: 'Contact', route: '/contact' }
-
 ];
 
-// Main App component
-export default function App() {
-  const [isMobile, setIsMobile] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  
-
-  const Logo = styled(Link)`
+const Logo = styled(Link)`
   position: absolute;
-  top: 1rem; /* Adjust top position as needed */
-  left: 1rem; /* Adjust left position as needed */
+  top: 1rem;
+  left: 1rem;
   display: flex;
   align-items: center;
-  z-index: 5; /* Ensure it's above other content */
-  text-decoration: none; /* Ensure no default underline */
+  z-index: 5;
+  text-decoration: none;
   cursor: pointer;
 
   img {
@@ -56,33 +46,36 @@ export default function App() {
   }
 
   h3 {
-    color: #fff; /* Make text color inherit */
+    color: #fff;
     margin: 0;
   }
 `;
+
+// Memoize functional components
+const MemoizedSidebar = React.memo(Sidebar);
+const MemoizedHeader = React.memo(Header);
+
+export default function App() {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     // Simulate loading process
     setTimeout(() => {
       setIsLoaded(true);
     }, 3000); // Adjust the timeout duration as needed
-    // Function to check screen size and update isMobile state
+
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 1024); // Adjust this breakpoint as needed
     };
 
-    // Initial check on mount
     handleResize();
-
-    // Add event listener for window resize
     window.addEventListener('resize', handleResize);
 
-    // Add event listener for window load
     window.addEventListener('load', () => {
       setIsLoaded(true);
-    }, 3000);
+    });
 
-    // Clean up event listeners on component unmount
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('load', () => {
@@ -91,52 +84,48 @@ export default function App() {
     };
   }, []);
 
+  const renderRoutes = useMemo(
+    () => (
+      <SlideProvider>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/license" element={<License />} />
+        <Route path="/clients" element={<Clients />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/slider-detail" element={<SliderDetail/>} />
+      </Routes>
+      </SlideProvider>
+    ),
+    []
+  );
+
   if (!isLoaded) {
-    return <SplashScreen/>
+    return <SplashScreen />;
   }
 
   return (
-    
     <ParallaxProvider>
       {isMobile ? (
         <Router>
           <div className="app">
-          <Logo to="/" className="logo">
-              <img src={logo} alt="Engineers Nest" />
-              <h3>Engineers <br/> Nest</h3>
+            <Logo to="/" className="logo">
+              <img src={logo} alt="Engineersnest" />
+              <h3>
+                Engineersnest
+              </h3>
             </Logo>
-            <Sidebar pages={pages} />
-
-            <main className="_content">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/license" element={<License />} />
-                <Route path="/certification" element={<Certification />} />
-                <Route path="/clients" element={<Clients />} />
-                <Route path="/contact" element={<Contact />} />
-              </Routes>
-            </main>
+            <MemoizedSidebar pages={pages} />
+            <main className="_content">{renderRoutes}</main>
           </div>
         </Router>
       ) : (
         <Router>
           <div className="app">
-            <Header />
-            <main className="_content">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/license" element={<License />} />
-                <Route path="/certification" element={<Certification />} />
-                <Route path="/clients" element={<Clients />} />
-                <Route path="/contact" element={<Contact />} />
-              </Routes>
-            </main>
+            <MemoizedHeader />
+            <main className="_content">{renderRoutes}</main>
           </div>
         </Router>
       )}

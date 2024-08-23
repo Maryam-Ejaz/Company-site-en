@@ -1,0 +1,155 @@
+/* ClientCard.css */
+
+.client-card-container-main {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    padding-top: 10rem;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    @media (max-width: 1500px) {
+        padding: 0;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+.client-card-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+
+}
+
+.client-card {
+    position: relative;
+    cursor: pointer;
+    width: 300px;
+    margin: 10px;
+
+    
+}
+
+.client-face {
+    width: 100%;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.client-face1 {
+    position: relative;
+    background: #f5f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+    padding: 0;
+}
+
+.client-card:hover .client-face1 {
+    background: #01afee;
+    transform: translateY(0);
+}
+
+.client-face1 .client-content {
+    opacity: 0.8;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-card:hover .client-face1 .client-content {
+    opacity: 1;
+}
+
+
+
+.client-face1 .client-content img {
+    width: 120px;
+    height: 100px;
+    padding: 0;
+}
+
+.client-face1 .client-content h3 {
+    margin: 10px 0 0;
+    padding: 0;
+    color: #242424;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.client-face2 {
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.client-face2 .client-content {
+    padding: 0px;
+    align-items: start;
+    justify-content: center;
+}
+
+.client-card:hover .client-face2 {
+    transform: translateY(0);
+}
+
+.client-face2 .client-content p {
+    margin: 0;
+    padding-left: 0px;
+}
+
+.client-face2 .client-content a {
+    margin: 15px 0px 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+    
+}
+
+.client-face2 .client-content a:hover {
+    background: #333;
+    color: #fff;
+}
+
+.page-component-heading-client {
+    font-family: "Jost", sans-serif;
+    font-size: 4rem;
+    margin: 0;
+    color: rgb(30, 29, 29);
+    opacity: 1;
+    padding-left: 1rem;
+
+    @media (max-width: 1500px) {
+        padding-left: 3.5rem;
+    }
+
+    @media (max-width: 850px) {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 2rem;
+        
+    }
+}

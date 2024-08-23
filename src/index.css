@@ -22,7 +22,6 @@ body {
   height: 100%;
   width: 100%;
   font-family: "Jost", "sans-serif";
-  scroll-behavior: inherit;
 }
 
 .hero-slider-overlay {
@@ -64,6 +63,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: flex-start;
   height: 200vh;
+  overflow: hidden;
 }
 
 .page-component  {
@@ -73,7 +73,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-between;
   align-items: flex-start;
   /* background-color: #182a3d; Example background color */
-  background-color: #2949a9;
+  background-color: #2f3293;
 }
 
 .div-in-component{
@@ -81,10 +81,10 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   width: 100%;
   /* background-color: #2949a9; */
-  background-color: #2949a9;
+  background-color: #2f3293;
   padding: 5rem; /* Padding around the content */
   padding-top: 10rem; /* Example background color */
-  color: #ccd0d55c; /* Example text color */
+  color: #ccd0d5db; /* Example text color */
 }
 
 .component-space {
@@ -96,53 +96,30 @@ body::-webkit-scrollbar-thumb {
 
 
 .page-component-heading {
-  
+
   font-family: "jost";
   font-size: 4rem;
   margin: 0;
   color: white;
-  opacity: 1; 
+  opacity: 1;
 
   @media (max-width: 850px) {
     font-size: 3rem;
-  
-}
-@media (max-width: 400px) {
-  font-size: 2rem;
+
+  }
+
+  @media (max-width: 400px) {
+    font-size: 2rem;
+
+  }
 
 }
-
-}
-
 
 .page-component-text {
   margin-top: 5%;
   line-height: 3rem;
   font-size: 2rem;
-  font-family: "Jost", "sans-serif";
+  font-family: "Jost";
 }
 
 
-/* Media queries for smaller screens */
-@media (max-width: 768px) {
-  .page-component  {
-    height: 80vh;
-  }
-
-  .div-in-component {
-    padding: 2rem; /* Further adjust padding for smaller screens */
-    padding-top: 5rem; /* Further adjust top padding for smaller screens */
-    background-color: #2949a9;
-    
-  }
-
-  .page-component-text {
-    line-height: 2rem; /* Further adjust line height for smaller screens */
-    font-size: 1.2rem; /* Further adjust font size for smaller screens */
-  }
-
-  .component-space {
-    margin-top: 10%;
-    padding: 2%;
-  }
-}

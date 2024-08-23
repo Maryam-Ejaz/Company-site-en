@@ -1,9 +1,6 @@
-// src/components/Sidebar/SidebarContent.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Sidebar.scss';
-
-
 
 const SidebarContent = ({ isActive, pages }) => {
   return (
@@ -12,14 +9,15 @@ const SidebarContent = ({ isActive, pages }) => {
         <ul>
           {pages.map((page, index) => (
             <li key={index} className="nav__item">
-              <Link to={page.route} data-menu-name={page.name} className="nav-link">{page.name}</Link>
+              <Link to={page.route} data-menu-name={page.name} className="nav-link">
+                {page.name}
+              </Link>
             </li>
           ))}
         </ul>
       </nav>
     </div>
-
   );
 };
 
-export default SidebarContent;
+export default React.memo(SidebarContent);

@@ -1,0 +1,172 @@
+.about-section {
+    position: relative;
+    padding: 150px 0 10px;
+    @media (max-width: 1000px) {
+        padding: 5%;
+        padding-bottom: 20%;
+      }
+  }
+  
+  .about-section__container {
+    max-width: 1470px;
+    min-height: fit-content;
+    margin: 0 auto;
+    @media (max-width: 1000px) {
+        max-width: fit-content;
+        
+      }
+  }
+  
+  .about-section__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    @media (max-width: 1000px) {
+        padding: 0%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+  }
+  
+  .about-section__content-column {
+    flex: 1;
+    margin-bottom: 50px;
+  }
+  
+  .about-section__inner-column {
+    position: relative;
+    padding-left: 30px;
+    z-index: 1;
+    @media (max-width: 1000px) {
+        padding-left: 0%;
+      }
+  }
+  
+  .about-section__sec-title {
+    margin-bottom: 45px;
+  }
+  
+  .about-section__title {
+    display: block;
+    font-size: 18px;
+    line-height: 24px;
+    color: #00aeef;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  
+  .about-section__sec-title p {
+    font-size: 4rem;
+    padding-left: 1rem;
+    line-height: 1.28em;
+    color: #222222;
+    padding-bottom: 18px;
+    font-family: "jost";
+    @media (max-width: 800px) {
+        font-size: 3rem;
+        text-align: center;
+      }
+  }
+  
+  .about-section__sec-title h2:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #d1d2d6;
+  }
+  
+  .about-section__text {
+    margin-bottom: 20px;
+    padding-left: 1rem;
+    font-size: 16px;
+    line-height: 26px;
+    color: #0a0a0a;
+    font-family: "jost";
+    @media (max-width: 800px) {
+        text-align: center;
+      }
+  }
+  
+  .about-section__image-column {
+    flex: 1;
+    position: relative;
+    @media (max-width: 800px) {
+        padding-top: 20%;
+      }
+  }
+  
+  .about-section__image-column .about-section__inner-column {
+    position: relative;
+    padding-left: 80px;
+    padding-bottom: 0;
+    z-index: 1;
+    
+  }
+  
+  
+  .about-section__author-desc h2 {
+    font-size: 21px;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 0;
+  }
+  
+  .about-section__author-desc span {
+    font-size: 16px;
+    letter-spacing: 6px;
+    color: #fff;
+    display: block;
+    font-weight: 400;
+  }
+  
+  .about-section__image-column {
+    flex: 1;
+    position: relative;
+    @media (max-width: 1000px) {
+        padding-bottom: 25%;
+      }
+  }
+  
+  .about-section__image-column .about-section__inner-column {
+    position: relative;
+    padding-left: 80px;
+    padding-bottom: 0;
+    z-index: 1;
+    @media (max-width: 1000px) {
+        padding: 0%;
+        padding-left: 5%;
+      }
+  }
+  
+  .about-section__image-1 {
+    position: relative; /* Ensure this is relative so the frame can position properly */
+    z-index: 2;
+    align-items: center;
+  }
+  
+  .about-section__image-1 img {
+    box-shadow: 0 30px 50px rgba(8, 13, 62, .15);
+    border-radius: 46px;
+    width: calc(50% + 70px);
+    display: block; /* Ensure the image block behavior to handle the frame */
+  }
+  
+  .about-section__image-column__image-frame {
+    
+    position: absolute;
+    width: calc(50% + 10px);
+    height: calc(100% + 160px);
+    top: -80px;
+    right: 90px;
+    border: 44px solid #01afee;
+    z-index: 0; /* Ensure this is below the image */
+    @media (max-width: 800px) {
+        right: 10%;
+
+      }
+  }
+  

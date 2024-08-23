@@ -1,0 +1,122 @@
+.contact-cards-container {
+    height: fit-content;
+  }
+  
+  .contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .contact-card-heading {
+    padding-top: 10vh;
+    padding-left: 4rem;
+    text-align: start;
+  }
+  
+  .contact-card-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10vw;
+    padding-bottom: 0vw;
+  }
+  
+  .contact-card-item {
+    flex: 1 1 calc(33.333% - 20px); /* Three cards per row with a gap */
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .contact-card {
+    background-color: #e9eef2;
+    display: flex;
+    height: 132px;
+    color: #fdfdfd;
+    overflow: hidden;
+    border-radius: 3px;
+    transition: transform 0.3s ease; /* Transition for smooth scaling */
+  }
+
+  .a-contact-card {
+    background-color: #e9eef2;
+    display: flex;
+    height: 132px;
+    color: #fdfdfd;
+  }
+  
+  .contact-card:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+  }
+  
+  .contact-card-icon {
+    width: 100px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3498db;
+    padding: 10px;
+    transform: rotate(-25deg) translate(-20px, -40px); /* Rotate the icon */
+  }
+  
+  .contact-card-icon .cardicon {
+    transform: rotate(25deg) translate(16px, 3px); /* Rotate back the icon itself to make it straight inside the diagonal box */
+  }
+  
+  .contact-card-content-wrap {
+    padding: 2px;
+    padding-left: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "jost";
+  }
+  
+  .contact-card-item-title {
+    font-size: 16px;
+    color: #212528;
+    margin-bottom: 3px;
+  }
+  
+  .contact-card-text {
+    color: #000;
+    font-size: 15px;
+  }
+  
+  /* Button that appears on hover */
+  .contact-card-button {
+    display: none;
+    background-color: #3498db; /* Same color as contact-card-icon */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-card:hover .contact-card-button {
+    display: block;
+  }
+  
+  /* Change button color on hover */
+  .contact-card-button:hover {
+    background-color: #217dbb; /* Darker shade on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .contact-card-item {
+      flex: 1 1 calc(50% - 20px); /* Two cards per row for smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .contact-card-item {
+      flex: 1 1 100%; /* One card per row for mobile screens */
+    }
+  }
+  
