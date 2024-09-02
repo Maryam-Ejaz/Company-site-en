@@ -97,7 +97,7 @@ const Home = React.memo(() => {
       <MemoizedHomeServices />
       <MemoizedHomeParallax />
       {/* <MemoizedExampleOne /> */}
-      <MemoizedHomeTestimonials />
+      {/* <MemoizedHomeTestimonials /> */}
       <MemoizedHomeTeam />
       <MemoizedHomeClients />
       <MemoizedHomeFooter />

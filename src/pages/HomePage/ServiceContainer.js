@@ -22,9 +22,9 @@ const ServiceContainer = () => {
                 <Parallax speed={-5} tagOuter="figure">
                     <ServiceBox imgSrc={woodwork} title="Interior Design" />
                 </Parallax>
-                <Parallax speed={-5} tagOuter="figure">
+                {/* <Parallax speed={-5} tagOuter="figure">
                     <ServiceBox imgSrc={electrical} title="Electrical Work" />
-                </Parallax>
+                </Parallax> */}
             </Suspense>
         </div>
     );

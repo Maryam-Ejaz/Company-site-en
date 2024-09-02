@@ -18,7 +18,7 @@ const FinalHomeFooter = () => {
                     <a href="#"><img src={logo} alt="Logo" /></a>
                   </figure>
                   <div className="text">
-                    <p>ENGINEERSNEST is a leading construction, fabrication, and interior work company 
+                    <p>Engineersnest is a leading construction, fabrication, and interior work company 
           based in Lahore, Pakistan. Since our inception, we have established a reputation for delivering exceptional quality 
           and innovation in every project we undertake.</p>
                     <span className="headerLine"></span>
@@ -52,7 +52,7 @@ const FinalHomeFooter = () => {
                       </div>
                     </div>
                     <div className="hf-contact">
-                      <p>engineernest.pak@gmail.com</p>
+                      <p>contact@engineernest.com</p>
                       <div className="footer-icon-div">
                         <FontAwesomeIcon className='footer-icon' icon={faEnvelope}/>
                       </div>

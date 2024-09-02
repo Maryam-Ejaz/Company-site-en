@@ -119,23 +119,6 @@ const services = [
         ],
       },
       {
-        icon: faBolt,
-        title: 'Electrical Services',
-        description: 'Providing comprehensive electrical services, from installation to maintenance, ensuring safety and efficiency for residential, commercial, and industrial needs. Our expertise includes wiring, lighting, and power systems designed to meet all your electrical requirements.',
-        slides: [
-          {
-            imageUrl: pole, // Replace with actual image URL
-            name: 'Lighting Solutions',
-            description: 'Innovative lighting designs to enhance visibility and ambiance.',
-          },
-          {
-            imageUrl: gate, // Replace with actual image URL
-            name: 'Electric Gates',
-            description: 'Reliable power systems to ensure uninterrupted electrical supply.',
-          },
-        ],
-      },
-      {
         icon: faSignHanging,
         title: 'Signage Boards',
         description: 'Expertly crafted signage solutions to enhance visibility and branding. We provide high-quality boards for various applications, including commercial and public spaces, ensuring clear communication and effective promotion.',

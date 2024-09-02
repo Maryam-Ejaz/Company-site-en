@@ -104,12 +104,12 @@ const projects = [
     'Fabrication',
     'Large-Scale Signage',
   ] },
-  { type: 'image-text', heading:"Airport Ruder Room Renovation", text: "Enigeersnest carried out a significant renovation of the ruder room at Allama Iqbal International Airport by installing advanced anti-static tiles imported from Germany. These tiles are designed to manage and prevent static electricity, which is crucial for protecting sensitive electronic equipment and ensuring optimal operational conditions within the room.", images: [ruder, ruder1, ruder2], tags: [
+  { type: 'image-text', heading:"Airport Control Room Renovation", text: "Enigeersnest carried out a significant renovation of the ruder room at Allama Iqbal International Airport by installing advanced anti-static tiles imported from Germany. These tiles are designed to manage and prevent static electricity, which is crucial for protecting sensitive electronic equipment and ensuring optimal operational conditions within the room.", images: [ruder, ruder1, ruder2], tags: [
     'Anti-Static Tiles',
     'Imported Flooring',
     'Specialized Renovation',
   ]},
-  { type: 'text-image', heading:"Boundry with Barbed Wire", text: "We executed a major security upgrade at a farm house by installing approximately 1400 running feet of barbed wire. This installation was designed to enhance the perimeter security by creating a strong physical barrier that effectively deters unauthorized access. Our meticulous installation ensures durability and long-term effectiveness, significantly boosting the safety and protection of the premises.", images: [wire0, wire1], tags: [
+  { type: 'text-image', heading:"Boundry Wall with Barbed Wire", text: "We executed a major security upgrade at a farm house by installing approximately 1400 running feet of barbed wire. This installation was designed to enhance the perimeter security by creating a strong physical barrier that effectively deters unauthorized access. Our meticulous installation ensures durability and long-term effectiveness, significantly boosting the safety and protection of the premises.", images: [wire0, wire1], tags: [
     'Barbed Wire Installation',
     'Physical Barrier',
     'Security Upgrade',
@@ -119,7 +119,7 @@ const projects = [
   {
     type: 'image-text',
     heading: "Warehouse Shed Construction in Kalam",
-    text: "We successfully completed the construction of a 1200 sq/ft warehouse shed for our client, Mr. Abdul Qavi Butt from PEL, in Kalam. Our team managed the entire project from fabrication to construction, delivering a robust and functional storage solution. This project included custom fabrication and meticulous construction to ensure durability and efficiency, tailored to the client's specific needs.",
+    text: "We successfully completed the construction of a 1500 sq/ft warehouse shed for our client, Mr. Abdul Qavi Butt from PEL, in Kalam. Our team managed the entire project from fabrication to construction, delivering a robust and functional storage solution. This project included custom fabrication and meticulous construction to ensure durability and efficiency, tailored to the client's specific needs.",
     images: [wh0, wh1, wh2, wh3], 
     tags: [
         'Shed Construction',
@@ -174,7 +174,7 @@ const projects = [
 },
 {
   type: 'image-text',
-  heading: "Din Group House Renovation",
+  heading: "Din Group House Construction",
   text: "We proudly completed a sophisticated high glass polish project at the newly constructed residence of the CEO of DIN group, in Lahore. Our skilled team employed advanced polishing techniques to achieve an exceptional mirror-like finish on all glass surfaces, enhancing the residence’s overall elegance and luxury. The process involved multiple stages of meticulous polishing to ensure a flawless, reflective surface that not only boosts the aesthetic appeal but also highlights the opulence of the property. This project underscores our commitment to delivering top-tier craftsmanship and attention to detail, ensuring a visually stunning result that complements the sophisticated design of the residence.",
   images: [house_1, house_2, house_3], // Add appropriate image references here
   tags: [

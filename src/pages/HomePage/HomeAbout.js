@@ -95,9 +95,9 @@ function AboutPage() {
           Pakistan's Premier Builders
         </span>
         <p className="page-component-text pc-text-a">
-          ENGINEERSNEST is a leading construction, fabrication, and interior work company 
+          Engineersnest is a leading construction, fabrication, and interior work company 
           based in Lahore, Pakistan. Since our inception, we have established a reputation for delivering exceptional quality 
-          and innovation in every project we undertake. From custom designs to government contracts, ENGINEERS NEST is 
+          and innovation in every project we undertake. From custom designs to government contracts, Engineersnest is 
           committed to exceeding expectations and building a better tomorrow for our clients nationwide.
         </p>
       </div>

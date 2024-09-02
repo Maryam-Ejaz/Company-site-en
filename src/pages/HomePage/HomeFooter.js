@@ -64,7 +64,7 @@ const HomeFooter = () => {
             <div className="form-image">
               <p className="montserrat">Get in touch</p>
               <p className="montserrat_">
-                Contact ENGINEERSNEST to discover tailored solutions for your building, design, and renovation needs.
+                Contact Engineersnest to discover tailored solutions for your building, design, and renovation needs.
               </p>
             </div>
             <form className="form" onSubmit={handleSubmit}>

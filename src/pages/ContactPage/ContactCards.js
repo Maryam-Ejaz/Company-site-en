@@ -37,13 +37,13 @@ const ContactCards = () => {
         </div>
         <div className="contact-card-item">
           <div className="contact-card">
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=engineernest.pak@gmail.com" target="_blank" rel="noopener noreferrer" className='a-contact-card'>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@engineernest.com" target="_blank" rel="noopener noreferrer" className='a-contact-card'>
             <span className="contact-card-icon">
               <FontAwesomeIcon icon={faEnvelope} size="2x" className='cardicon'/>
             </span>
             <div className="contact-card-content-wrap">
               <span className="contact-card-item-title">Email us</span>
-              <p className="contact-card-text">engineernest.pak@gmail.com</p>
+              <p className="contact-card-text">contact@engineernest.com</p>
             </div>
             </a>
           </div>
