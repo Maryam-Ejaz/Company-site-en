@@ -186,26 +186,26 @@ const Header = () => {
       switch (location.pathname) {
         case '/about':
           if (window.innerWidth <= 1100) {
-            triggerPosition1 = 500;
-            triggerPosition2 = 4720;
+            triggerPosition1 = 700;
+            triggerPosition2 = 4920;
           } else if (window.innerWidth <= 1300) {
             triggerPosition1 = 700;
             triggerPosition2 = 4750;
           } else if (window.innerWidth <= 1700) {
             triggerPosition1 = 700;
-            triggerPosition2 = 5600;
+            triggerPosition2 = 4600;
           }
           break;
         case '/services':
           if (window.innerWidth <= 1100) {
-            triggerPosition1 = 3300;
-            triggerPosition2 = 6620;
+            triggerPosition1 = 1000;
+            triggerPosition2 = 1850;
           } else if (window.innerWidth <= 1300) {
-            triggerPosition1 = 3250;
-            triggerPosition2 = 6150;
+            triggerPosition1 = 1000;
+            triggerPosition2 = 1950;
           } else if (window.innerWidth <= 1700) {
             triggerPosition1 = 700;
-            triggerPosition2 = 5600;
+            triggerPosition2 = 1720;
           }
           break;
         case '/portfolio':
@@ -213,32 +213,32 @@ const Header = () => {
             triggerPosition1 = 3300;
             triggerPosition2 = 6620;
           } else if (window.innerWidth <= 1300) {
-            triggerPosition1 = 3250;
-            triggerPosition2 = 6150;
+            triggerPosition1 = 1250;
+            triggerPosition2 = 23150;
           } else if (window.innerWidth <= 1700) {
             triggerPosition1 = 700;
-            triggerPosition2 = 9250;
+            triggerPosition2 = 19350;
           }
           break;
         case '/clients':
           if (window.innerWidth <= 1100) {
-            triggerPosition1 = 3300;
-            triggerPosition2 = 6620;
+            triggerPosition1 = 1000;
+            triggerPosition2 = 3250;
           } else if (window.innerWidth <= 1300) {
-            triggerPosition1 = 3250;
-            triggerPosition2 = 6150;
+            triggerPosition1 = 900;
+            triggerPosition2 = 3550;
           } else if (window.innerWidth <= 1700) {
             triggerPosition1 = 700;
-            triggerPosition2 = 3300;
+            triggerPosition2 = 3000;
           }
           break;
         case '/license':
           if (window.innerWidth <= 1100) {
-            triggerPosition1 = 3300;
-            triggerPosition2 = 6620;
+            triggerPosition1 = 1000;
+            triggerPosition2 = 2820;
           } else if (window.innerWidth <= 1300) {
-            triggerPosition1 = 3250;
-            triggerPosition2 = 6150;
+            triggerPosition1 = 1000;
+            triggerPosition2 = 2950;
           } else if (window.innerWidth <= 1700) {
             triggerPosition1 = 700;
             triggerPosition2 = 1500;
@@ -246,26 +246,26 @@ const Header = () => {
           break;
         case '/contact':
           if (window.innerWidth <= 1100) {
-            triggerPosition1 = 3300;
-            triggerPosition2 = 6620;
+            triggerPosition1 = 800;
+            triggerPosition2 = 2120;
           } else if (window.innerWidth <= 1300) {
-            triggerPosition1 = 3250;
-            triggerPosition2 = 6150;
+            triggerPosition1 = 800;
+            triggerPosition2 = 2250;
           } else if (window.innerWidth <= 1700) {
             triggerPosition1 = 700;
-            triggerPosition2 = 9250;
+            triggerPosition2 = 200;
           }
           break;
         default:
           if (window.innerWidth <= 1100) {
-            triggerPosition1 = 3300;
-            triggerPosition2 = 6620;
+            triggerPosition1 = 800;
+            triggerPosition2 = 5620;
           } else if (window.innerWidth <= 1300) {
-            triggerPosition1 = 3250;
-            triggerPosition2 = 6150;
+            triggerPosition1 = 800;
+            triggerPosition2 = 4650;
           } else if (window.innerWidth <= 1700) {
             triggerPosition1 = 700;
-            triggerPosition2 = 5600;
+            triggerPosition2 = 4400;
           }
           break;
       }

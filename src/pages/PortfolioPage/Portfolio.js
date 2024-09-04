@@ -55,9 +55,14 @@ import pso from "../../assets/portfolio/pso_.jpg";
 import shell from "../../assets/portfolio/shell_.jpg";
 import vertex from "../../assets/portfolio/med.jpg";
 import signage from "../../assets/portfolio/signage.jpg";
+import pit from "../../assets/portfolio/pit.jpg";
+import pcsir from "../../assets/portfolio/pcsir.jpeg";
+import laundry from "../../assets/portfolio/laundry.jpg";
+import house from "../../assets/portfolio/house.jpg";
+import rhouse from "../../assets/portfolio/rhouse.jpg";
 
 const projects = [
-  { type: 'text-image', heading:"Allama Iqbal Inernational Airport Projects", text: 'ENGINEERSNEST undertook a range of specialized projects at Allama Iqbal International Airport, including the construction of a secure gunman post, the fabrication of aluminum cargo sheds, the installation of aluminum partitions in a hall, and extensive interior work. These projects encompassed designing and building durable structures, implementing secure storage solutions, creating flexible space management systems, and enhancing the overall interior environment with high-quality finishes and functional upgrades.', images: [aiia, aiia0, aiia1, aiia2, aiia3, aiia4, aiia5, aiia6, aiia7], tags: [
+  { type: 'text-image', heading:"Allama Iqbal Inernational Airport Projects", text: 'ENGINEERSNEST undertook a range of specialized projects at Allama Iqbal International Airport, including the construction of a secure gunman post, the fabrication of aluminum cargo sheds, the installation of aluminum partitions in a hall, and extensive interior work. These projects encompassed designing and building durable structures, implementing secure storage solutions, creating flexible space management systems, and enhancing the overall interior environment with high-quality finishes and functional upgrades.', images: [aiia, aiia0, aiia1, aiia2, aiia3, aiia4, aiia7], tags: [
     'Fabrication',
     'Design',
     'Construction',
@@ -89,7 +94,7 @@ const projects = [
     'Professional Workspace',
     'Aesthetic Improvements'
   ] },
-  { type: 'image-text', heading:"Cargo and Entrance Booth Sheds", text: "At Allama Iqbal International Airport, ENGINEERSNEST delivered a range of aluminum sheds, including those for entrance booths in the parking area, providing essential shelter for airport staff. Additionally, three other aluminum sheds were expertly fabricated to meet various operational requirements, offering robust and weather-resistant storage solutions integrated seamlessly into the airport's infrastructure.", images: [shed0,shed1, shed2], tags: [
+  { type: 'image-text', heading:"Cargo and Entrance Booth Sheds", text: "At Allama Iqbal International Airport, ENGINEERSNEST delivered a range of aluminum sheds, including those for entrance booths in the parking area, providing essential shelter for airport staff. Additionally, three other aluminum sheds were expertly fabricated to meet various operational requirements, offering robust and weather-resistant storage solutions integrated seamlessly into the airport's infrastructure.", images: [shed0, shed2], tags: [
     'Aluminum Fabrication',
     'Entrance Booth Sheds',
     'Parking Area Shelters',
@@ -148,7 +153,7 @@ const projects = [
     type: 'image-text',
     heading: "House Renovation",
     text: "We proudly completed a sophisticated high glass polish project at the newly constructed residence of Mian Mansha, CEO of Nishat, in Lahore. Our skilled team employed advanced polishing techniques to achieve an exceptional mirror-like finish on all glass surfaces, enhancing the residence’s overall elegance and luxury. The process involved multiple stages of meticulous polishing to ensure a flawless, reflective surface that not only boosts the aesthetic appeal but also highlights the opulence of the property. This project underscores our commitment to delivering top-tier craftsmanship and attention to detail, ensuring a visually stunning result that complements the sophisticated design of the residence.",
-    images: [house0, house2, house3, house4, house5, house6, house7, house1], // Add appropriate image references here
+    images: [house0, house2, house3, house4, house5, house6, house7, house1], 
     tags: [
         'High Glass Polish',
         'Luxury Residences',
@@ -165,7 +170,7 @@ const projects = [
     type: 'text-image',
     heading: "Vegetable Supply for Central Jail",
     text: "We executed a large-scale vegetable supply project for Central Jail Kot Lakh Pat, where we delivered over 125,000 kg of essential vegetables, including tomatoes, ginger, and onions, from January to June 2021. As a dependable general order supplier, we managed the entire procurement and delivery process with efficiency and reliability. This project underscored our capability to handle substantial orders and maintain high standards of quality and service in the supply chain.",
-    images: [jail], // Add appropriate image references here
+    images: [jail], 
     tags: [
         'Vegetable Supply',
         'General Order Supplier',
@@ -176,7 +181,7 @@ const projects = [
   type: 'image-text',
   heading: "Din Group House Construction",
   text: "We proudly completed a sophisticated high glass polish project at the newly constructed residence of the CEO of DIN group, in Lahore. Our skilled team employed advanced polishing techniques to achieve an exceptional mirror-like finish on all glass surfaces, enhancing the residence’s overall elegance and luxury. The process involved multiple stages of meticulous polishing to ensure a flawless, reflective surface that not only boosts the aesthetic appeal but also highlights the opulence of the property. This project underscores our commitment to delivering top-tier craftsmanship and attention to detail, ensuring a visually stunning result that complements the sophisticated design of the residence.",
-  images: [house_1, house_2, house_3], // Add appropriate image references here
+  images: [house_1, house_2, house_3], 
   tags: [
       'Renovation',
       'Advanced Techniques',
@@ -190,7 +195,7 @@ const projects = [
   type: 'text-image',
   heading: "Shell Petroleum Shed and Signage",
   text: "We successfully completed the design and installation of the shed and signage for a Shell Petroleum station. Our team meticulously crafted and installed the shed structure, ensuring durability and adherence to safety standards. The signage was designed with a focus on visibility and brand alignment, utilizing high-quality materials to ensure longevity and resistance to weather conditions. This project demonstrates our expertise in combining functionality with aesthetic appeal, providing a robust and visually appealing solution that enhances the overall customer experience at the station.",
-  images: [shell], // Add appropriate image references here
+  images: [shell], 
   tags: [
       'Construction',
       'Signage Design',
@@ -204,7 +209,7 @@ const projects = [
   type: 'image-text',
   heading: "Renovation of American Embassy",
   text: "We successfully undertook the renovation project for the American Embassy, focusing on enhancing both the functionality and security of the premises. Our team executed the project with precision, ensuring that all renovations adhered to the stringent safety and security standards required for diplomatic facilities. The renovation included upgrading the interior and exterior structures, implementing modern design elements, and improving the overall energy efficiency of the building. This project highlights our capability to handle high-security environments while delivering exceptional quality and attention to detail.",
-  images: [ae1,ae2,ae3], // Add appropriate image references here
+  images: [ae1,ae2,ae3], 
   tags: [
       'Renovation',
       'Security Standards',
@@ -218,7 +223,7 @@ const projects = [
   type: 'text-image',
   heading: "Projects with Interwood",
   text: "We have successfully partnered with Interwood to deliver high-quality wooden work projects for various esteemed clients. Our collaboration has involved designing, crafting, and installing a wide range of wooden elements, including bespoke furniture, cabinetry, and interior decor. Each project was tailored to meet the unique requirements of our clients, ensuring both functionality and aesthetic excellence. Through our meticulous attention to detail and commitment to using premium materials, we have consistently delivered results that exceed expectations and enhance the living and working environments of our clients.",
-  images: [house_4], // Add appropriate image references here
+  images: [house_4], 
   tags: [
       'Wooden Work',
       'Custom Furniture',
@@ -232,7 +237,7 @@ const projects = [
   type: 'image-text',
   heading: "GO Petroleum Pumps",
   text: "We successfully completed the signage and ceiling work across various GO petroleum pump sites in Pakistan. Our team was tasked with creating and installing durable signage that aligns with the brand's identity, as well as executing ceiling work that enhances the aesthetic and functionality of the service stations. The project required meticulous attention to detail, ensuring that all work was completed to the highest standards across multiple locations. This project demonstrates our ability to manage and execute large-scale branding and construction efforts with consistent quality across diverse geographical locations.",
-  images: [go], // Add appropriate image references here
+  images: [go], 
   tags: [
       'Signage',
       'Ceiling Work',
@@ -244,7 +249,7 @@ const projects = [
   type: 'text-image',
   heading: "Fascia and Ceiling Work at PSO",
   text: "We have successfully completed the fascia and ceiling work at various Pakistan State Oil (PSO) service stations. This project involved the design, fabrication, and installation of high-quality fascia panels and ceiling structures that not only align with PSO's brand identity but also enhance the overall appearance and functionality of the service stations. Our team ensured that each installation was carried out with precision and attention to detail, meeting the rigorous standards required for such high-traffic commercial environments. The result is a modern and cohesive look that reflects PSO's commitment to excellence and customer satisfaction.",
-  images: [pso], // Add appropriate image references here
+  images: [pso], 
   tags: [
       'Fascia Work',
       'Ceiling Work',
@@ -258,7 +263,7 @@ const projects = [
   type: 'image-text',
   heading: "Facilities and Hospitals Construction for Vertex Medical",
   text: "We have successfully constructed a range of facilities and hospitals across Punjab for Vertex Medical. Our work involved the development of state-of-the-art medical infrastructure designed to meet the highest standards of healthcare. Each project was executed with a focus on precision, quality, and functionality, ensuring that the facilities serve the needs of patients and medical professionals alike. From modern hospital complexes to specialized medical centers, we have delivered solutions that enhance the healthcare landscape in the region. This extensive portfolio reflects our commitment to building reliable and advanced healthcare infrastructure for the betterment of the community.",
-  images: [vertex], // Add appropriate image references here
+  images: [vertex], 
   tags: [
       'Construction',
       'Healthcare Infrastructure',
@@ -268,6 +273,95 @@ const projects = [
       'Community Health'
   ]
 },
+{
+  "type": "text-image",
+  "heading": "DHQ Sahiwal Laundry Room Construction",
+  "text": "The construction of the laundry room at DHQ Sahiwal was successfully completed with a focus on durability, efficiency, and adherence to healthcare standards. The project involved the planning, design, and construction of a fully equipped laundry facility capable of handling high volumes of hospital linen. The facility was designed with modern infrastructure, including industrial-grade washing machines, dryers, and ventilation systems to ensure optimal performance. Our team prioritized safety and functionality, ensuring that the laundry room meets the stringent hygiene requirements essential for a healthcare environment.",
+  "images": [laundry], 
+  "tags": [
+      "Laundry Room",
+      "Healthcare Facility",
+      "DHQ Sahiwal",
+      "Construction",
+      "Hospital Infrastructure",
+      "Hygiene Standards"
+  ]
+},
+{
+  "type": "image-text",
+  "heading": "Airport Fuel Pit Construction",
+  "text": "We have successfully completed the construction of fuel pits at various airports, ensuring the highest standards of safety, efficiency, and reliability. These fuel pits are designed to facilitate the quick and secure refueling of aircraft, with an emphasis on minimizing downtime and enhancing operational efficiency. Our construction process involved precise excavation, robust concrete work, and the installation of state-of-the-art fuel distribution systems. Each fuel pit was engineered to meet rigorous industry standards, providing a reliable solution that supports the demanding requirements of airport operations.",
+  "images": [pit], 
+  "tags": [
+      "Construction",
+      "Airport Infrastructure",
+      "Fuel Pit",
+      "Safety Standards",
+      "Operational Efficiency",
+      "Aviation Fuel"
+  ]
+},
+{
+  "type": "text-image",
+  "heading": "Maintenance Work at PCSIR",
+  "text": "We have undertaken extensive maintenance work related to construction at the Pakistan Council of Scientific and Industrial Research (PCSIR) facilities. This project focused on the refurbishment and upkeep of various infrastructure elements to ensure the continued functionality and safety of the research environment. Our team addressed critical areas including structural repairs, facility upgrades, and the optimization of laboratory spaces. The work was carried out with meticulous attention to detail, adhering to the stringent standards required for research institutions. The result is a well-maintained facility that supports PCSIR's ongoing scientific endeavors.",
+  "images": [pcsir], 
+  "tags": [
+      "Maintenance",
+      "Construction",
+      "PCSIR",
+      "Infrastructure Upkeep",
+      "Research Facility",
+      "Structural Repairs"
+  ]
+},
+{
+  "type": "image-text",
+  "heading": "Guard Posts Construction at Allama Iqbal International Airport",
+  "text": "We have successfully completed the construction of guard posts at Allama Iqbal International Airport, designed to enhance the security infrastructure of the airport. These guard posts are strategically positioned to provide comprehensive coverage and are constructed with durable materials to withstand various environmental conditions. The project involved the design and construction of reinforced structures that meet the stringent security requirements of an international airport. Each guard post is equipped with essential security features, ensuring that the airport remains a safe and secure environment for both passengers and staff.",
+  "images": [shed1], 
+  "tags": [
+      "Construction",
+      "Airport Security",
+      "Guard Posts",
+      "Allama Iqbal International Airport",
+      "Security Infrastructure",
+      "Reinforced Structures"
+  ]
+},
+{
+  "type": "text-image",
+  "heading": "Residential Houses Construction",
+  "text": "We have successfully completed the construction of multiple residential houses, each designed with a focus on modern living and architectural excellence. These homes are built to provide comfort, functionality, and aesthetic appeal, incorporating the latest construction techniques and materials. Our team worked closely with homeowners to ensure that every aspect of the design reflects their preferences and lifestyle needs. From the foundation to the finishing touches, we prioritized quality and attention to detail, resulting in residences that are not only beautiful but also durable and energy-efficient. Each house is a testament to our commitment to creating homes that families can cherish for years to come.",
+  "images": [house, rhouse], 
+  "tags": [
+      "Residential Construction",
+      "Modern Homes",
+      "Architectural Design",
+      "Quality Standards",
+      "Home Building"
+  ]
+},
+{
+  "type": "image-text",
+  "heading": "Office Partitions at Allama Iqbal International Airport",
+  "text": "We have successfully completed the installation of office partitions at Allama Iqbal International Airport, enhancing the workspace environment for administrative and operational staff. These partitions were designed to create functional, private, and aesthetically pleasing office spaces within the airport’s bustling environment. The project involved the use of high-quality materials that provide sound insulation and maintain the visual appeal of the interiors. Our team ensured that the installation process was efficient, minimizing disruption to the airport's daily operations. The result is a well-organized office space that supports productivity and meets the operational needs of the airport staff.",
+  "images": [aiia5, aiia6,], 
+  "tags": [
+      "Construction",
+      "Office Partitions",
+      "Allama Iqbal International Airport",
+      "Workspace Design",
+      "Sound Insulation",
+      "Airport Infrastructure"
+  ]
+}
+
+
+
+
+
+
 
 
 
