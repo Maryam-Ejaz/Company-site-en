@@ -251,9 +251,9 @@ const Header = () => {
           } else if (window.innerWidth <= 1300) {
             triggerPosition1 = 800;
             triggerPosition2 = 2250;
-          } else if (window.innerWidth <= 1700) {
-            triggerPosition1 = 700;
-            triggerPosition2 = 200;
+          } else if (window.innerWidth <= 1800) {
+            triggerPosition1 = 800;
+            triggerPosition2 = 2200;
           }
           break;
         default:
